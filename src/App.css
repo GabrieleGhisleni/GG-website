@@ -1,38 +1,60 @@
-.App {
+.jumbotron{
+  background-color: antiquewhite;
+  padding: 30px;
+  min-height:20px;
+  /* border: rgb(240, 206, 144) .5px solid; */
+
+}
+
+.jumbotron h1{
   text-align: center;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.jumbotron h3{
+  font-style: italic;
+  font-weight: 400;
+  text-align: -webkit-center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBar{
+  background-color: white;
+  padding: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navLogo{
+  color: black!important;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutMe{
+  text-align: justify;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homeTitle{
+  padding: 20px;
+}
+
+.contactList li {
+  text-align: center;
+  padding: 5px;
+}
+
+.contactList li a, .footer a{
+  color: black;
+}
+
+.footer{
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+  background-color: blanchedalmond;
+  margin-top: 30px ;
+}
+
+.row-body{
+  padding: 20px;
+}
+
+.myImg{
+  opacity:0.6;
 }
