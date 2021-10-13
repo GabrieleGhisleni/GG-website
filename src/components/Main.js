@@ -27,7 +27,7 @@ class Main extends Component{
                     <Route path='/home' component={()=> <div><Header/><Home/></div>}/>
                     <Route path='/projects' component={() => <TabProject data={PROJECTS}/>}/>
                     <Route path='/hobbies' component={() => <TabProject data={HOBBIES}/>}/>
-                    <Redirect to='/'/>
+                    <Redirect to='/home'/>
                 </Switch>
                 <Footer/>
             </React.Fragment>
