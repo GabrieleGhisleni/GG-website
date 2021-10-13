@@ -49,8 +49,7 @@ class TabProject extends Component{
         });
 
         const contentTab = data.map((prj) => {
-            let git;
-
+            let git = [];
             if (prj.projectGit){
                 git = [
                     (

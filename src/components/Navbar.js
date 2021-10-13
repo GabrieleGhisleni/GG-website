@@ -22,7 +22,9 @@ class NavBar extends Component{
           <div className='container'> 
 
             <NavbarBrand className='mr-auto'>
+            <NavLink to='/home' to='/home'>
                 <span className='navLogo'>Gabriele Ghisleni</span>
+            </NavLink>
             </NavbarBrand>
             <NavbarToggler onClick={this.togglerNav} />
  

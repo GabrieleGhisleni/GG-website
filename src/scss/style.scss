@@ -1,6 +1,6 @@
+// npm run scss
 
-
-$main: rgb(143, 188, 190)!important;
+$main: rgb(158, 207, 209)!important;
 $main-font: 'Raleway', sans-serif;
 // $main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -34,6 +34,8 @@ $black-main: #3a4145!important;
 .navLogo{
 font-weight: 800;
 font-family: $main-font;
+color: $black-main;
+text-decoration: none!important;
 }
 
 .footer{

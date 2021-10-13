@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: #8fbcbe !important;
+  background-color: #9ecfd1 !important;
   margin-bottom: 0 !important;
   padding: 0.5rem !important; }
   .jumbotron .jumbotron h1 {
@@ -19,13 +19,15 @@
 
 .navLogo {
   font-weight: 800;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  color: #3a4145 !important;
+  text-decoration: none !important; }
 
 .footer {
   padding-top: 15px;
   padding-bottom: 5px;
   border: solid black 1px;
-  background-color: #8fbcbe !important;
+  background-color: #9ecfd1 !important;
   margin-top: 30px; }
 
 .contactList li {
@@ -44,7 +46,7 @@
   padding-bottom: 20px; }
 
 .project {
-  background-color: #8fbcbe !important;
+  background-color: #9ecfd1 !important;
   border-radius: 20px !important;
   margin: 10px; }
 
