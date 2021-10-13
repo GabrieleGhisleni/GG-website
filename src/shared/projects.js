@@ -62,7 +62,7 @@ export const PROJECTS = [
     ,
     {
         id: 5,
-        name: 'Computationaasdasdsl heysocial science',
+        name: 'Data Viz',
         description: 'During the university i start studying machine network and neural network\
         then i started to build simple models and more complex algorithms structures. im very interested\
         in Natural language process',
