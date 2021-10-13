@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/GG-website/static/css/main.73b4bf16.chunk.css",
-    "main.js": "/GG-website/static/js/main.2f0c5fa8.chunk.js",
-    "main.js.map": "/GG-website/static/js/main.2f0c5fa8.chunk.js.map",
+    "main.js": "/GG-website/static/js/main.bc5e824f.chunk.js",
+    "main.js.map": "/GG-website/static/js/main.bc5e824f.chunk.js.map",
     "runtime-main.js": "/GG-website/static/js/runtime-main.d2fe365f.js",
     "runtime-main.js.map": "/GG-website/static/js/runtime-main.d2fe365f.js.map",
     "static/css/2.b9429390.chunk.css": "/GG-website/static/css/2.b9429390.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.b9429390.chunk.css",
     "static/js/2.756d3d9f.chunk.js",
     "static/css/main.73b4bf16.chunk.css",
-    "static/js/main.2f0c5fa8.chunk.js"
+    "static/js/main.bc5e824f.chunk.js"
   ]
 }
