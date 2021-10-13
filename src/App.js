@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/style.css';
+import {BrowserRouter} from 'react-router-dom'
+
 import {Component} from 'react';
 import Main from './components/Main';
-
 
 class App extends Component{
   constructor(props){
@@ -11,7 +11,9 @@ class App extends Component{
   render(){
     return(
       <div>
-        <Main />
+        <BrowserRouter>
+          <Main />
+        </BrowserRouter>
       </div>
     )
   }

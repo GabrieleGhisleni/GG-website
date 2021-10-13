@@ -1,0 +1,87 @@
+
+
+$main: rgb(143, 188, 190)!important;
+$main-font: 'Raleway', sans-serif;
+// $main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+$black-main: #3a4145!important;
+
+.jumbotron{
+    background-color: $main;
+    margin-bottom: 0!important;
+    padding: 0.5rem!important;
+
+    .jumbotron h1{
+        color: $black-main;
+        font-family: $main-font;
+
+        text-align: center;
+        font-weight: 800;
+        font-size: 3rem;
+     }
+
+    .jumbotron h3{
+    color: $black-main;
+    font-family: $main-font;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    text-align: -webkit-center;
+    }
+  }
+  
+.navLogo{
+font-weight: 800;
+font-family: $main-font;
+}
+
+.footer{
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border: solid black 1px;
+  background-color: $main;
+  margin-top: 30px;
+}
+
+
+.contactList li {
+text-align: center;
+padding: 5px;
+}
+
+.contactList li a, .footer a{
+color: black;
+}
+
+.myImg{
+padding:2px;
+border:1px solid black;
+border-radius: 55px;
+}
+
+.headerImg{
+padding-bottom: 20px;
+}
+
+.project{
+background-color: $main;
+border-radius: 20px!important;
+margin: 10px;
+}
+
+.nav-link{
+padding:1rem!important;
+
+}
+
+@media screen and (max-width: 900px) {
+  .nav-link{
+    padding: 0.5rem 1rem!important;
+    }
+}
+
+.navTabs:hover, .navCurrent{
+text-decoration: underline;
+font-size: 1.2rem;
+}

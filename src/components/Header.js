@@ -6,9 +6,9 @@ export const Header = ()=>{
             <Jumbotron>
                 <div className='jumbotron'>
                     <div className='container'>
-                    <div className='row'>
+                    <div className='row headerImg'>
                         <div className='col-12' style={{textAlign:'center'}}>
-                            <img className='myImg' src='/assets/images/home.jpg' height='100' width='100' style={{borderRadius:"20px"}}/>
+                            <img className='myImg img-fluid' src='/assets/images/home.jpg' height='150' width='150'/>
                         </div>
                     </div>
                         <div className='row'>

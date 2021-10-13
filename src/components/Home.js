@@ -3,11 +3,11 @@ import {List, Li} from 'reactstrap';
 export const Home = () => {
     return(
         <div className='container'>
-            <div className='row row-body'>
-                <div className='col-12 col-md-1'></div>
-                <div className='col-12 col-md-6'>
+            <div className='row' style={{padding:'20px'}}>
+                <div className='col-12 col-md-1' ></div>
+                <div className='col-12 col-md-6' style={{marginTop:'10px'}}>
                         <h4 className='homeTitle'>About Me</h4>
-                        <div className='aboutMe'>
+                        <div style={{textAlign: "justify"}}>
                                 We take inspiration from real life's events and make them shared!
                                 Our creation is up the the entire community nothing is excluded.                                We take inspiration from real life's events and make them shared!
                                 Our creation is up the the entire community nothing is excluded.                                We take inspiration from real life's events and make them shared!
@@ -19,7 +19,7 @@ export const Home = () => {
                         </div>
                 </div>
                 <div className='col-12 col-md-1'></div>
-                <div className='col-12 col-md'>
+                <div className='col-12 col-md' style={{marginTop:'10px'}}>
                     <h4 className='homeTitle'>Contacts</h4>
                     <div className='contactList'>
                     <List type='unstyled'>

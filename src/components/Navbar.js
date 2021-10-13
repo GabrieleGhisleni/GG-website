@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {NavLink, Button,Modal,Label, ModalHeader,ModelBody, Navbar, NavbarBrand, Jumbotron, Nav, NavbarToggler, Collapse, NavItem, ModalBody, Form, FormGroup, Input} from 'reactstrap';
+import {Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem} from 'reactstrap';
+import {NavLink} from 'react-router-dom';
 
 class NavBar extends Component{
     constructor(props){
@@ -17,7 +18,7 @@ class NavBar extends Component{
     render () {
         return(
         <React.Fragment>
-        <Navbar light expand='md' className='navBar'>
+        <Navbar light expand='md'>
           <div className='container'> 
 
             <NavbarBrand className='mr-auto'>
@@ -29,16 +30,26 @@ class NavBar extends Component{
                 <div className='ml-auto'>
                     <Nav navbar className='ml-auto'>
                         <NavItem>
-                            <NavLink className='nav-link' to='/home'><span className='fa fa-home'></span>Home</NavLink>
+                            <NavLink to='/home'className='nav-link' to='/home'>
+                                Home
+                                {/* <span className='fa fa-home'></span>Home */}
+                            </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className='nav-link' to='/contact'><span className='fa fa-info-circle'></span>Contattaci</NavLink>
+                            <NavLink className='nav-link' to='/projects'>
+                                Projects
+                                {/* <span className='fa fa-info-circle'></span>Projects */}
+                            </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink className='nav-link' to='/hobbies'>
+                                Hobbies
+                                {/* Hobbies&nbsp;<span className='fa fa-beer'></span> */}
+                            </NavLink>
                         </NavItem>
                     </Nav>
                 </div>
             </Collapse>
-
-
           </div>
         </Navbar>
         </React.Fragment>

@@ -5,10 +5,10 @@ export const Footer = () => {
         <div className='footer'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-7'>
+                    <div className='col'>
                         <span>@2021 Ghisleni Gabriele</span>
                     </div>
-                    <div className='col-5' style={{textAlign:'right'}}>
+                    <div className='col' style={{textAlign:'right'}}>
                     <List type="inline">
                         <ListInlineItem>
                             <a href='@'><i class="fa fa-github fa-lg"></i></a>
@@ -26,9 +26,6 @@ export const Footer = () => {
                         <a href='@'><i class="fa fa-info fa-lg"></i></a>
                         </ListInlineItem>
                     </List>
-                        
-
-
                     </div>
                 </div>
             </div>
