@@ -1,0 +1,8 @@
+{
+  "short_name": "GG Web Site",
+  "name": "Gabriele Ghisleni Dev Web Page",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
