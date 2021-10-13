@@ -24,10 +24,10 @@ class Main extends Component{
             <React.Fragment>
                 <NavBar />
                 <Switch>
-                    <Route path='/home' component={()=> <div><Header/><Home/></div>}/>
-                    <Route path='/projects' component={() => <TabProject data={PROJECTS}/>}/>
-                    <Route path='/hobbies' component={() => <TabProject data={HOBBIES}/>}/>
-                    <Redirect to='/home'/>
+                    <Route path='/GG-website/home' component={()=> <div><Header/><Home/></div>}/>
+                    <Route path='/GG-website/projects' component={() => <TabProject data={PROJECTS}/>}/>
+                    <Route path='/GG-website/hobbies' component={() => <TabProject data={HOBBIES}/>}/>
+                    <Redirect to='/GG-website/home'/>
                 </Switch>
                 <Footer/>
             </React.Fragment>

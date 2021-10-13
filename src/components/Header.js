@@ -8,7 +8,9 @@ export const Header = ()=>{
                     <div className='container'>
                     <div className='row headerImg'>
                         <div className='col-12' style={{textAlign:'center'}}>
-                            <img className='myImg img-fluid' src='/assets/images/home.jpg' height='150' width='150'/>
+                            <img className='myImg img-fluid' 
+                            src = "%PUBLIC_URL%/assets/images/home.jpg"
+                            height='150' width='150'/>
                         </div>
                     </div>
                         <div className='row'>

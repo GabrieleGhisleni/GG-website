@@ -22,7 +22,7 @@ class NavBar extends Component{
           <div className='container'> 
 
             <NavbarBrand className='mr-auto'>
-            <NavLink to='/home' to='/home'>
+            <NavLink to='/home' to='/GG-website/home'>
                 <span className='navLogo'>Gabriele Ghisleni</span>
             </NavLink>
             </NavbarBrand>
@@ -32,19 +32,19 @@ class NavBar extends Component{
                 <div className='ml-auto'>
                     <Nav navbar className='ml-auto'>
                         <NavItem>
-                            <NavLink to='/home'className='nav-link' to='/home'>
+                            <NavLink to='/GG-website/'className='nav-link' to='/home'>
                                 Home
                                 {/* <span className='fa fa-home'></span>Home */}
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className='nav-link' to='/projects'>
+                            <NavLink className='nav-link' to='/GG-website/projects'>
                                 Projects
                                 {/* <span className='fa fa-info-circle'></span>Projects */}
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink className='nav-link' to='/hobbies'>
+                            <NavLink className='nav-link' to='/GG-website/hobbies'>
                                 Hobbies
                                 {/* Hobbies&nbsp;<span className='fa fa-beer'></span> */}
                             </NavLink>
