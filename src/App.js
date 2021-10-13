@@ -11,7 +11,7 @@ class App extends Component{
   render(){
     return(
       <div>
-        <BrowserRouter>
+        <BrowserRouter basename='/GG-website/'>
           <Main />
         </BrowserRouter>
       </div>
