@@ -23,10 +23,10 @@ export const Home = () => {
                     <h4 className='homeTitle'>Contacts</h4>
                     <div className='contactList'>
                     <List type='unstyled'>
-                        <li><a href='@'><i class="fa fa-github fa-lg">&nbsp;Github</i></a></li>
-                        <li><a href='@'><i class="fa fa-linkedin fa-lg">&nbsp;Linkedin</i></a></li>
-                        <li><a href='@'><i class="fa fa-facebook fa-lg">&nbsp;Facebook</i></a></li>
-                        <li><a href='@'><i class="fa fa-instagram fa-lg">&nbsp;Instagram</i></a></li>
+                        <li><a href='https://github.com/GabrieleGhisleni'><i class="fa fa-github fa-lg">&nbsp;Github</i></a></li>
+                        <li><a href='https://www.linkedin.com/in/gabriele-ghisleni-bb553a199/'><i class="fa fa-linkedin fa-lg">&nbsp;Linkedin</i></a></li>
+                        <li><a href='https://www.facebook.com/gabriele.ghisleni.125'><i class="fa fa-facebook fa-lg">&nbsp;Facebook</i></a></li>
+                        <li><a href='https://www.instagram.com/g_gabry_/'><i class="fa fa-instagram fa-lg">&nbsp;Instagram</i></a></li>
                         <li><a href='@'><i class="fa fa-info fa-lg">&nbsp;Download CV</i></a></li>
                     </List>
                     </div>
