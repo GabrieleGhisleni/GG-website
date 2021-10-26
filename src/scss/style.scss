@@ -1,11 +1,11 @@
 // npm run scss
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap');
 
-$main: rgb(158, 207, 209)!important;
+// $main: rgb(158, 207, 209)!important; first light blue!
+$main: rgb(184, 238, 240)!important;
+// $main: rgb(253, 247, 222)!important;
 $main-font: 'Raleway', sans-serif!important;
 $p-font: 'Open Sans', sans-serif!important;
-// $main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 $black-main: #3a4145!important;
 
 
@@ -64,6 +64,11 @@ padding: 5px;
   font-style: normal;
 }
 
+.myItem{
+  border: 1px solid $black-main;
+  background-color: rgb(217, 245, 242);
+}
+
 .myImg{
 padding:2px;
 border:1px solid black;
@@ -110,13 +115,6 @@ margin: 10px;
   }
 }
 
-@media screen and (max-width: 900px) {
-  .nav-link{
-    font-weight: 800px!important;
-    
-    padding: 0.5rem 1rem!important;
-  }
-}
 
 .navTabs{
   font-weight: 800;
@@ -132,3 +130,17 @@ margin: 10px;
   padding:1rem!important;
 }
 
+.homeP{
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.homeTitle{
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .nav-link{
+    font-weight: 800px!important;
+    padding: .4rem 1rem!important;
+  }
+}

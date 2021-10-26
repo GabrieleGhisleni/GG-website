@@ -53,9 +53,9 @@ class TabProject extends Component {
     const navTab = data.map((prj) => {
       let activation = this.state.activeTab === prj.id.toString();
       return (
-        <NavItem className='customItem'>
+        <NavItem>
           <NavLink
-            className={classnames({ active: activation })}
+            className= {classnames({ active: activation }, 'myItem')}
             onClick={() => {
               this.toggleTav(prj.id.toString());
               this.scroll();
@@ -91,7 +91,7 @@ class TabProject extends Component {
               if( prj.webpage[i]){
                   webpage = (
                     <p className='body'>
-                        <em>Active WebPage: <a href={prj.webpage[i]}  target='_blank'>Visit the App!</a>{" "}</em>
+                        <em>Active WebPage: <a href={prj.webpage[i]}  target='_blank'> Visit the App! <i style={{color:'firebrick'}}  className='fa fa-rocket'></i></a>{" "}</em>
                     </p>
                   )
 
@@ -135,7 +135,7 @@ class TabProject extends Component {
                         onClick={this.scrollUp}
                         style={{ borderRadius: "30px" }}>
                         <i
-                          class="fa fa-angle-double-up"
+                          className="fa fa-angle-double-up"
                           style={{ color: "black" }}>
                         </i>
                       </Button>

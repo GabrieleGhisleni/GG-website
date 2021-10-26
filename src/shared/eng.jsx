@@ -8,7 +8,7 @@ export const Engineering = {
       types: structured, semi-structured and a bit of unstructured, in batch or
       in stream process. In particular we focused on the key concept of data
       processing pipeline and its component: ingestion, storage, computation and
-      serving layer.
+      serving layer. 
       <br />
       <br />
       The storage part was one of the most time consuming we went trough the
@@ -20,7 +20,7 @@ export const Engineering = {
       studied only theoretically. About computing we saw some advanced tools for
       big data computing such as Apache Spark using the free platform of
       databricks. At the end of the course we had a brief overview of Apache
-      Flink without implementing it.Lastly regarding the serving layer we spent
+      Flink without implementing it. Lastly regarding the serving layer we spent
       times on the usage of Docker.
     </p>
   ),

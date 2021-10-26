@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap");
 .jumbotron {
-  background-color: #9ecfd1 !important;
+  background-color: #b8eef0 !important;
   margin-bottom: 0 !important;
   padding: 0.5rem !important; }
   .jumbotron .jumbotron h1 {
@@ -28,7 +28,7 @@
   padding-top: 15px;
   padding-bottom: 5px;
   border: solid black 1px;
-  background-color: #9ecfd1 !important;
+  background-color: #b8eef0 !important;
   margin-top: 30px; }
 
 .contactList li {
@@ -42,6 +42,10 @@
   font-weight: 800;
   font-style: normal; }
 
+.myItem {
+  border: 1px solid #3a4145 !important;
+  background-color: #d9f5f2; }
+
 .myImg {
   padding: 2px;
   border: 1px solid black;
@@ -51,7 +55,7 @@
   padding-bottom: 20px; }
 
 .project {
-  background-color: #9ecfd1 !important;
+  background-color: #b8eef0 !important;
   border-radius: 20px !important;
   margin: 10px; }
 
@@ -76,11 +80,6 @@
     color: black;
     text-align: center; }
 
-@media screen and (max-width: 900px) {
-  .nav-link {
-    font-weight: 800px !important;
-    padding: 0.5rem 1rem !important; } }
-
 .navTabs {
   font-weight: 800;
   font-style: "Open Sans", sans-serif !important; }
@@ -92,3 +91,15 @@
 
 .nav-link {
   padding: 1rem !important; }
+
+.homeP {
+  font-size: 1.1rem;
+  font-style: italic; }
+
+.homeTitle {
+  text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    font-weight: 800px !important;
+    padding: 0.4rem 1rem !important; } }

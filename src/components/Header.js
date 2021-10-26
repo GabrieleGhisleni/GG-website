@@ -15,11 +15,12 @@ export const Header = ()=>{
                     </div>
                         <div className='row'>
                             <div className='col-md-3'></div>
-                            <div class='col-12 col-md-6'>
+                            <div className='col-12 col-md-6'>
                                 <h1>Gabriele Ghisleni</h1>
                                 <h3>
-                                    We take inspiration from real life's events and helping people to make it Real!
-                                    Our creations is up to the entire community nothing is excluded.
+                                    Data Scientist and Web Developer. <br/>
+                                    Based in Trento, Italy.
+
                                 </h3>
                             </div>
                         </div>
