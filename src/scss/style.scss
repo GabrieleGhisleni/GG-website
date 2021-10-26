@@ -1,10 +1,13 @@
 // npm run scss
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap');
 
 $main: rgb(158, 207, 209)!important;
-$main-font: 'Raleway', sans-serif;
+$main-font: 'Raleway', sans-serif!important;
+$p-font: 'Open Sans', sans-serif!important;
 // $main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 $black-main: #3a4145!important;
+
 
 .jumbotron{
     background-color: $main;
@@ -50,10 +53,15 @@ text-decoration: none!important;
 .contactList li {
 text-align: center;
 padding: 5px;
+   a, .footer a{
+    color: black;
+    }
 }
 
-.contactList li a, .footer a{
-color: black;
+.myFont {
+  font-family: $p-font;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .myImg{
@@ -72,18 +80,55 @@ border-radius: 20px!important;
 margin: 10px;
 }
 
-.nav-link{
-padding:1rem!important;
 
+.related{
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 10px;
+
+  
+}
+
+.gitLink{
+  // font-weight: 1000;
+  margin: 5px 10px;
+  border-radius: 10px;
+  padding:10px;
+  text-align: center;
+  h6 {
+    font-size: 1.1rem;
+    font-weight: 1000!important;
+  }
+  p {
+    text-align: justify;
+  }
+  .body{
+    margin-top: 5px;
+    color: black;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .nav-link{
+    font-weight: 800px!important;
+    
     padding: 0.5rem 1rem!important;
-    }
+  }
+}
+
+.navTabs{
+  font-weight: 800;
+  font-style: $p-font;
 }
 
 .navTabs:hover, .navCurrent{
-text-decoration: underline;
-font-size: 1.2rem;
+  text-decoration: none!important;
+  font-size: 1.5rem;
+  color:$black-main;
 }
+.nav-link{
+  padding:1rem!important;
+}
+
