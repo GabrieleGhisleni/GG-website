@@ -13,9 +13,9 @@ export const PROJECTS = [
   Engineering,
   Front,
   Back,
+  CSS,
   Geo,
   Customer,
   Project,
   Viz,
-  CSS,
 ];

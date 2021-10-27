@@ -26,4 +26,8 @@ export const Geo = {
     "https://github.com/GabrieleGhisleni/GasolinePrices",
   ],
   pdf: [null],
+  webpage: [
+    null,
+    "https://gabrieleghisleni.github.io/GasolinePrices/",
+  ],
 };

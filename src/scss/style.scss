@@ -64,10 +64,6 @@ padding: 5px;
   font-style: normal;
 }
 
-.myItem{
-  border: 1px solid $black-main;
-  background-color: rgb(217, 245, 242);
-}
 
 .myImg{
 padding:2px;
@@ -138,9 +134,17 @@ margin: 10px;
 .homeTitle{
   text-align: center;
 }
+
+.myItem{
+  border: 1px solid $black-main;
+  background-color: rgb(217, 245, 242);
+}
+
+
 @media screen and (max-width: 768px) {
   .nav-link{
     font-weight: 800px!important;
-    padding: .4rem 1rem!important;
+    padding: 0.3rem 1rem!important;
+    margin: 0;
   }
 }

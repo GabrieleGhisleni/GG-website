@@ -21,6 +21,10 @@ export const Customer = {
     "perform and interpret a choice based conjoint analysis.",
     "Markdown notes from lectures.",
   ],
-  projectGit: ["https://github.com/GabrieleGhisleni/ImageRetrival-ConvNN", '#','#'],
+  projectGit: [
+    "https://github.com/GabrieleGhisleni/CustomerAnalytics/blob/master/R/1.Traditional%20Conjoint%20Multi_LM/Traditional_conjoint.md",
+    "https://github.com/GabrieleGhisleni/CustomerAnalytics/blob/master/R/2.Choice%20Based%20Conjoint%20MNL/Choice-based-conjoint-analysis.md",
+    "https://github.com/GabrieleGhisleni/CustomerAnalytics/blob/master/Traditional_conjoint.md",
+  ],
   pdf: [null],
 };

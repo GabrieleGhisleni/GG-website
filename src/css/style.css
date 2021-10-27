@@ -42,10 +42,6 @@
   font-weight: 800;
   font-style: normal; }
 
-.myItem {
-  border: 1px solid #3a4145 !important;
-  background-color: #d9f5f2; }
-
 .myImg {
   padding: 2px;
   border: 1px solid black;
@@ -99,7 +95,12 @@
 .homeTitle {
   text-align: center; }
 
+.myItem {
+  border: 1px solid #3a4145 !important;
+  background-color: #d9f5f2; }
+
 @media screen and (max-width: 768px) {
   .nav-link {
     font-weight: 800px !important;
-    padding: 0.4rem 1rem !important; } }
+    padding: 0.3rem 1rem !important;
+    margin: 0; } }
