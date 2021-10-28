@@ -10,8 +10,8 @@ export const Header = () => {
               <div className="col-12" style={{ textAlign: "center" }}>
                 <img
                   className="myImg img-fluid rounded-circle"
-                  src="https://gabrieleghisleni.github.io/GG-website/assets/images/home.jpg"
-                //   src="./assets/images/home.jpg"
+                  // src="https://gabrieleghisleni.github.io/GG-website/assets/images/home.jpg"
+                  src="./assets/images/home.jpg"
                   height="150"
                   width="150"
                   alt="mySelf"

@@ -18,9 +18,9 @@ import classnames from "classnames";
 class TabProject extends Component {
   constructor(props) {
     super(props);
-    
+    this.myRef = React.createRef()  
     this.state = {
-      activeTab: (window.innerWidth < 768) ? null : '0',
+      activeTab: (window.innerWidth < 768) ? '0' : '0',
       visible: true,
     };
 
@@ -42,10 +42,7 @@ class TabProject extends Component {
 
   scroll(){
     if (window.innerWidth < 768){
-    window.scrollBy({
-        top: 450,
-        behavior: 'smooth'
-      })}
+      this.myRef.current.scrollIntoView({block: "start", behavior: 'smooth'})}
   }
 
   render() {
@@ -162,7 +159,10 @@ class TabProject extends Component {
                 {navTab}
               </Nav>
             </Col>
-            <Col className="col-12 col-md">{contentTab}</Col>
+            <Col className="col-12 col-md">
+            <div ref={this.myRef}></div>
+            
+            {contentTab}</Col>
           </Row>
         </div>
         </Container>
