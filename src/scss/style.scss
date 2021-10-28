@@ -1,29 +1,44 @@
 // npm run scss
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap");
 
-// $main: rgb(158, 207, 209)!important; first light blue!
-$main: rgb(184, 238, 240)!important;
-// $main: rgb(253, 247, 222)!important;
-$main-font: 'Raleway', sans-serif!important;
-$p-font: 'Open Sans', sans-serif!important;
-$black-main: #3a4145!important;
+$white: rgb(255, 255, 255);
+$main: #589ff0 !important;
+$main: #6298d6 !important;
 
+$main-font: "Raleway", sans-serif !important;
+$p-font: "Open Sans", sans-serif !important;
+$black-main: #3a4145 !important;
 
-.jumbotron{
-    background-color: $main;
-    margin-bottom: 0!important;
-    padding: 0.5rem!important;
+body {
+  background-color: $white;
+}
 
-    .jumbotron h1{
-        color: $black-main;
-        font-family: $main-font;
+.footer {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border: solid black 1px;
+  background-color: $main;
+  margin-top: 30px;
+  * {
+    color: $black-main;
+  }
+}
 
-        text-align: center;
-        font-weight: 800;
-        font-size: 3rem;
-     }
+.jumbotron {
+  background-color: $main;
+  margin-bottom: 0 !important;
+  padding: 0.5rem !important;
 
-    .jumbotron h3{
+  .jumbotron h1 {
+    color: $black-main;
+    font-family: $main-font;
+
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+  }
+
+  .jumbotron h3 {
     color: $black-main;
     font-family: $main-font;
     font-style: italic;
@@ -31,31 +46,23 @@ $black-main: #3a4145!important;
     font-size: 1.3rem;
     margin-top: 20px;
     text-align: -webkit-center;
-    }
   }
-  
-.navLogo{
-font-weight: 800;
-font-family: $main-font;
-color: $black-main;
-text-decoration: none!important;
 }
 
-.footer{
-  padding-top: 15px;
-  padding-bottom: 5px;
-  border: solid black 1px;
-  background-color: $main;
-  margin-top: 30px;
+.navLogo {
+  font-weight: 800;
+  font-family: $main-font;
+  color: $black-main;
+  text-decoration: none !important;
 }
-
 
 .contactList li {
-text-align: center;
-padding: 5px;
-   a, .footer a{
+  text-align: center;
+  padding: 5px;
+  a,
+  .footer a {
     color: black;
-    }
+  }
 }
 
 .myFont {
@@ -64,87 +71,113 @@ padding: 5px;
   font-style: normal;
 }
 
-
-.myImg{
-padding:2px;
-border:1px solid black;
-border-radius: 55px;
+.myImg {
+  margin-top: 20px;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: $white;
+  opacity: 100%;
 }
 
-.headerImg{
-padding-bottom: 20px;
+.headerImg {
+  padding-bottom: 20px;
 }
 
-.project{
-background-color: $main;
-border-radius: 20px!important;
-margin: 10px;
+.project {
+  background-color: $white;
+  border: 2px black;
+  border-radius: 20px !important;
+  margin-top: 10px;
+  .cardH {
+    font-weight: 900 !important;
+    text-align: center;
+    background-color: $main;
+    color: black;
+    font-size: 1.5rem;
+  }
 }
 
-
-.related{
+.related {
   text-align: center;
-  font-size: 1.2rem;
-  font-style: italic;
-  margin: 10px;
-
-  
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 10px;
+  background-color: $main;
+  font-family: $main-font;
+  color: black;
 }
 
-.gitLink{
-  // font-weight: 1000;
-  margin: 5px 10px;
+.gitLink {
+  margin: 30px 5px ;
   border-radius: 10px;
-  padding:10px;
   text-align: center;
   h6 {
     font-size: 1.1rem;
-    font-weight: 1000!important;
+    font-weight: 900 !important;
+    a {
+      font-family: $main-font;
+      color: black;
+    }
   }
   p {
     text-align: justify;
   }
-  .body{
+  .body {
     margin-top: 5px;
     color: black;
     text-align: center;
   }
+  .HR{
+    border: 1px dashed;
+    border-color: $main;
+    }
 }
 
-
-.navTabs{
-  font-weight: 800;
-  font-style: $p-font;
+.leftNav {
+  margin-top: 10px;
+  padding: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  background-color: $main;
 }
 
-.navTabs:hover, .navCurrent{
-  text-decoration: none!important;
+.navTabs:hover,
+.navCurrent {
+  text-decoration: none !important;
   font-size: 1.5rem;
-  color:$black-main;
+  color: $main;
 }
-.nav-link{
-  padding:1rem!important;
+.nav-link {
+  padding: 1rem !important;
 }
 
-.homeP{
+.homeP {
   font-size: 1.1rem;
   font-style: italic;
 }
 
-.homeTitle{
+.homeTitle {
   text-align: center;
 }
 
-.myItem{
+.myItem {
+  font-weight: 800;
+  font-style: $p-font;
   border: 1px solid $black-main;
-  background-color: rgb(217, 245, 242);
+  background-color: $white;
+  span {
+    color: $main;
+  }
 }
 
-
 @media screen and (max-width: 768px) {
-  .nav-link{
-    font-weight: 800px!important;
-    padding: 0.3rem 1rem!important;
+  .nav-link {
+    font-weight: 800px !important;
+    padding: 0.3rem 1rem !important;
     margin: 0;
+  }
+  .project {
+    margin: 0;
+    margin-top: 25px;
   }
 }

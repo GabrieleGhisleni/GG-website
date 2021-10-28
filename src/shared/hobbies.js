@@ -20,20 +20,6 @@ export const HOBBIES = [
         description: "I started to play tennis for fun the summer of 2021. Currently we are a group of 5 friends playing for sharing some good moments outside the workday and study life",
         image: null,
         extra: null
-    },
-    {
-        id: 3,
-        name: "Call of Duty",
-        description: "When i was younger i made up this:",
-        image: null,
-        extra: {video: 'https://www.youtube.com/watch?v=m6W9ufkY-_U'}
-    },
-    {
-        id: 3,
-        name: "Call of Duty",
-        description: "When i was younger i made up this:",
-        image: null,
-        extra: {video: 'https://www.youtube.com/watch?v=m6W9ufkY-_U'}
-    },
+    }
 
 ]

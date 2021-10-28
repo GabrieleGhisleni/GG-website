@@ -110,6 +110,7 @@ class TabProject extends Component {
                 {" "}
                 {prj.projectDescription[i]} <br /> {pdf}{webpage}{" "}
               </p>
+              <hr className='HR'/>
             </div>
           );
         }
@@ -121,7 +122,7 @@ class TabProject extends Component {
             <Row className='text-justify myFont'>
               <Col className="col-12 sm">
                 <Card className="project">
-                  <CardHeader style={{textAlign:'center'}}>{prj.name}</CardHeader>
+                  <CardHeader className='cardH'>{prj.name}</CardHeader>
                   <CardBody>
                     <div style={{ whiteSpace: "pre-line" }}>
                       {prj.description}
@@ -151,11 +152,11 @@ class TabProject extends Component {
 
     return (
       <React.Fragment>
-        <Container col={10}>
+        <Container>
+        <div style={{margin:'0 40px'}}>
           <Row style={{ borderTop: "solid black 1px", paddingTop: "20px" }}>
             <Col
-              className="col-12 col-md-4"
-              style={{ paddingTop: "20px", textAlign: "center" }}
+              className="col-12 text-center col-md-auto leftNav"
             >
               <Nav vertical tabs>
                 {navTab}
@@ -163,6 +164,7 @@ class TabProject extends Component {
             </Col>
             <Col className="col-12 col-md">{contentTab}</Col>
           </Row>
+        </div>
         </Container>
       </React.Fragment>
     );

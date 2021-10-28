@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap");
+body {
+  background-color: white; }
+
+.footer {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  border: solid black 1px;
+  background-color: #6298d6 !important;
+  margin-top: 30px; }
+  .footer * {
+    color: #3a4145 !important; }
+
 .jumbotron {
-  background-color: #b8eef0 !important;
+  background-color: #6298d6 !important;
   margin-bottom: 0 !important;
   padding: 0.5rem !important; }
   .jumbotron .jumbotron h1 {
@@ -24,17 +36,11 @@
   color: #3a4145 !important;
   text-decoration: none !important; }
 
-.footer {
-  padding-top: 15px;
-  padding-bottom: 5px;
-  border: solid black 1px;
-  background-color: #b8eef0 !important;
-  margin-top: 30px; }
-
 .contactList li {
   text-align: center;
   padding: 5px; }
-  .contactList li a, .contactList li .footer a {
+  .contactList li a,
+  .contactList li .footer a {
     color: black; }
 
 .myFont {
@@ -43,47 +49,68 @@
   font-style: normal; }
 
 .myImg {
-  padding: 2px;
-  border: 1px solid black;
-  border-radius: 55px; }
+  margin-top: 20px;
+  padding: 5px;
+  border: 2px solid black;
+  background-color: white;
+  opacity: 100%; }
 
 .headerImg {
   padding-bottom: 20px; }
 
 .project {
-  background-color: #b8eef0 !important;
+  background-color: white;
+  border: 2px black;
   border-radius: 20px !important;
-  margin: 10px; }
+  margin-top: 10px; }
+  .project .cardH {
+    font-weight: 900 !important;
+    text-align: center;
+    background-color: #6298d6 !important;
+    color: black;
+    font-size: 1.5rem; }
 
 .related {
   text-align: center;
-  font-size: 1.2rem;
-  font-style: italic;
-  margin: 10px; }
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 10px;
+  background-color: #6298d6 !important;
+  font-family: "Raleway", sans-serif !important;
+  color: black; }
 
 .gitLink {
-  margin: 5px 10px;
+  margin: 30px 5px;
   border-radius: 10px;
-  padding: 10px;
   text-align: center; }
   .gitLink h6 {
     font-size: 1.1rem;
-    font-weight: 1000 !important; }
+    font-weight: 900 !important; }
+    .gitLink h6 a {
+      font-family: "Raleway", sans-serif !important;
+      color: black; }
   .gitLink p {
     text-align: justify; }
   .gitLink .body {
     margin-top: 5px;
     color: black;
     text-align: center; }
+  .gitLink .HR {
+    border: 1px dashed;
+    border-color: #6298d6 !important; }
 
-.navTabs {
-  font-weight: 800;
-  font-style: "Open Sans", sans-serif !important; }
+.leftNav {
+  margin-top: 10px;
+  padding: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #6298d6 !important; }
 
-.navTabs:hover, .navCurrent {
+.navTabs:hover,
+.navCurrent {
   text-decoration: none !important;
   font-size: 1.5rem;
-  color: #3a4145 !important; }
+  color: #6298d6 !important; }
 
 .nav-link {
   padding: 1rem !important; }
@@ -96,11 +123,18 @@
   text-align: center; }
 
 .myItem {
+  font-weight: 800;
+  font-style: "Open Sans", sans-serif !important;
   border: 1px solid #3a4145 !important;
-  background-color: #d9f5f2; }
+  background-color: white; }
+  .myItem span {
+    color: #6298d6 !important; }
 
 @media screen and (max-width: 768px) {
   .nav-link {
     font-weight: 800px !important;
     padding: 0.3rem 1rem !important;
-    margin: 0; } }
+    margin: 0; }
+  .project {
+    margin: 0;
+    margin-top: 25px; } }

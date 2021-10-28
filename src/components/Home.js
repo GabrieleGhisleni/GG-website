@@ -48,6 +48,11 @@ export const Home = () => {
                 </a>
               </li>
               <li>
+                <a href="mailto:gabriele.ghisleni01@gmail.com">
+                  <i className="fa fa-envelope-o fa-lg">&nbsp;Email Me</i>
+                </a>
+              </li>
+              <li>
                 <a href="@">
                   <i className="fa fa-info fa-lg">&nbsp;Download CV</i>
                 </a>
