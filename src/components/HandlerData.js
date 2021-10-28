@@ -20,7 +20,7 @@ class TabProject extends Component {
     super(props);
     this.myRef = React.createRef();
     this.state = {
-      activeTab: window.innerWidth < 768 ? '0' : "0",
+      activeTab: '0',
       inf: window.innerWidth < 768 ? "hidden" : "visible",
       visible: true,
     };
