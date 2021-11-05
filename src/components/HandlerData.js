@@ -13,7 +13,9 @@ import {
   Col,
   Container,
 } from "reactstrap";
+import {useLocation} from 'react-router-dom'
 import classnames from "classnames";
+
 
 class TabProject extends Component {
   constructor(props) {
@@ -35,6 +37,7 @@ class TabProject extends Component {
   }
 
   scrollUp() {
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -45,7 +48,7 @@ class TabProject extends Component {
     this.setState({inf:"visible"})
     if (window.innerWidth < 768) {
       this.myRef.current.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+    } 
   }
 
 
@@ -173,10 +176,9 @@ class TabProject extends Component {
 
     return (
       <React.Fragment>
-        <Container>
-          <div style={{ margin: "0 40px" }}>
-            <Row style={{ borderTop: "solid black 1px", paddingTop: "20px" }}>
-              <Col className="col-12 text-center col-md-auto leftNav">
+        <Container style={{marginTop:"70px"}}>
+            <Row>
+              <Col xs={{size:10, offset:1}} className="col-md-auto leftNav">
                 <Nav vertical tabs>
                   {navTab}
                 </Nav>
@@ -187,7 +189,7 @@ class TabProject extends Component {
                 {contentTab}
               </Col>
             </Row>
-          </div>
+   
         </Container>
       </React.Fragment>
     );

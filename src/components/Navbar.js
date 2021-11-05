@@ -1,61 +1,55 @@
-import React, {Component} from "react";
-import {Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem} from 'reactstrap';
-import {NavLink} from 'react-router-dom';
+import React, { Component, useState } from "react";
+import {
+    Col,
+    Row,
+    Navbar,
+    NavbarBrand,
+    Nav,
+    NavbarToggler,
+    Collapse,
+    NavItem,
+    Container,
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
 
-class NavBar extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            isOpen:false,
-        }
-        this.togglerNav = this.togglerNav.bind(this)
-    };
+const NavBar = () => {
+    const [open, setOpen] = useState(false);
 
-    togglerNav() {
-        this.setState({isOpen: !this.state.isOpen});
-    }
-
-    render () {
-        return(
+    return (
         <React.Fragment>
-        <Navbar light expand='md'>
-          <div className='container'> 
-
-            <NavbarBrand className='mr-auto'>
-            <NavLink to='/home' to='/home'>
-                <span className='navLogo'>Gabriele Ghisleni</span>
-            </NavLink>
-            </NavbarBrand>
-            <NavbarToggler onClick={this.togglerNav} />
- 
-            <Collapse isOpen={this.state.isOpen} navbar >
-                <div className='ml-auto'>
-                    <Nav navbar className='ml-auto'>
-                        <NavItem>
-                            <NavLink to='/'className='nav-link' to='/home'>
-                                Home
-                                {/* <span className='fa fa-home'></span>Home */}
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className='nav-link' to='/projects'>
-                                Projects
-                                {/* <span className='fa fa-info-circle'></span>Projects */}
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className='nav-link' to='/hobbies'>
-                                Hobbies
-                                {/* Hobbies&nbsp;<span className='fa fa-beer'></span> */}
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                </div>
-            </Collapse>
-          </div>
-        </Navbar>
+            <Navbar dark className="mainNav" fixed="top">
+                <Container>
+                    <NavbarBrand className="mr-auto">
+                        <NavLink to="/home" to="/home">
+                            <span className="navLogo">GG Portfolio</span>
+                        </NavLink>
+                    </NavbarBrand>
+                    <NavbarToggler onClick={() => setOpen(!open)} />
+                    <Collapse isOpen={open} navbar>
+                        <Col className='text-center'>
+                            <Nav navbar className="ml-auto">
+                                <NavItem>
+                                    <NavLink to="/" className="nav-link" to="/home" onClick={() => setOpen(!open)}>
+                                        Home
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/projects" onClick={() => setOpen(!open)}>
+                                        Projects
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/hobbies2" onClick={() => setOpen(!open)}>
+                                        Hobbies
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                            </Col>
+                    </Collapse>
+                </Container>
+            </Navbar>
         </React.Fragment>
-    )};
-}
+    );
+};
 
 export default NavBar;

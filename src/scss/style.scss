@@ -1,69 +1,122 @@
 // npm run scss
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap");
 
-$white: rgb(255, 255, 255);
-$main: #589ff0 !important;
-$main: #6298d6 !important;
+
 
 $main-font: "Raleway", sans-serif !important;
 $p-font: "Open Sans", sans-serif !important;
-$black-main: #3a4145 !important;
+$main-black: #000000 !important;
+$blue-main: #3fa6e6 !important;
 
-body {
-  background-color: $white;
+
+.handlerData{
+  
 }
+.rowAbout {
+  min-height: calc(80vh);
+  padding-top: 30px;
+  margin-top:50px;
+
+  @media screen and (max-width: 600px) {
+    padding: 5px;
+    margin:5px;
+    margin-top: 35px ;
+  }
+
+  .homeP {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: justify;
+  }
+
+  .contacts {
+    text-align: center;  
+    @media screen and (max-width: 600px) {
+      margin-top: 55px ;
+    }
+  }
+
+  .contactList li {
+    text-align: center;
+    padding: 5px;
+    a,
+    .footer a {
+      color: black;
+    }
+  }
+
+  .title{
+    font-family: $main-font;
+    color: $blue-main;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+}
+
+.firstPage {
+  width: 100%;
+  // height: calc(100vh - 55px); // if remove sticky navbar
+  height: calc(100vh);
+  margin: 0 !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: $main-font;
+  color: wheat;
+  .animation {
+    font-style: italic;
+    padding-top: 10px;
+    font-weight: 600 !important;
+    @media screen and (max-width: 600px) {
+      font-size: 1.5rem;
+    }
+  }
+  .name {
+    font-size: 5rem;
+    color: wheat;
+    @media screen and (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.mainNav {
+  background-color: $main-black;
+  .navLogo {
+    font-weight: 800;
+    font-family: $main-font;
+    color: $blue-main;
+    text-decoration: none !important;
+  }
+  .navbar-toggler {
+    border: 2px solid;
+    border-color: $blue-main;
+  }
+  .nav-link {
+    font-weight: 700;
+    color: $blue-main;
+    font-size: 1.2rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
 
 .footer {
   padding-top: 15px;
   padding-bottom: 5px;
   border: solid black 1px;
-  background-color: $main;
+  background-color: $main-black;
   margin-top: 30px;
   * {
-    color: $black-main;
+    color: $blue-main;
   }
 }
 
-.jumbotron {
-  background-color: $main;
-  margin-bottom: 0 !important;
-  padding: 0.5rem !important;
 
-  .jumbotron h1 {
-    color: $black-main;
-    font-family: $main-font;
 
-    text-align: center;
-    font-weight: 800;
-    font-size: 3rem;
-  }
-
-  .jumbotron h3 {
-    color: $black-main;
-    font-family: $main-font;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    text-align: -webkit-center;
-  }
-}
-
-.navLogo {
-  font-weight: 800;
-  font-family: $main-font;
-  color: $black-main;
-  text-decoration: none !important;
-}
-
-.contactList li {
-  text-align: center;
-  padding: 5px;
-  a,
-  .footer a {
-    color: black;
-  }
-}
 
 .myFont {
   font-family: $p-font;
@@ -71,43 +124,34 @@ body {
   font-style: normal;
 }
 
-.myImg {
-  margin-top: 20px;
-  padding: 5px;
-  border: 2px solid black;
-  background-color: $white;
-}
-
-.headerImg {
-  padding-bottom: 20px;
-}
-
 .project {
-  background-color: $white;
+  background-color: wheat;
   border: 2px black;
   border-radius: 20px !important;
   margin-top: 10px;
+  padding: 10px;
+  font-size: 1.1rem;
   .cardH {
     font-weight: 900 !important;
     text-align: center;
-    background-color: $main;
+    background-color: $blue-main;
     color: black;
     font-size: 1.5rem;
   }
+  .related {
+    text-align: center;
+    // font-size: 1.3rem;
+    font-weight: 900;
+    border-radius: 10px;
+    background-color: $blue-main;
+    font-family: $main-font;
+    color: black;
+  }
 }
 
-.related {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 900;
-  border-radius: 10px;
-  background-color: $main;
-  font-family: $main-font;
-  color: black;
-}
 
 .gitLink {
-  margin: 30px 5px ;
+  margin: 30px 5px;
   border-radius: 10px;
   text-align: center;
   h6 {
@@ -126,70 +170,67 @@ body {
     color: black;
     text-align: center;
   }
-  .HR{
+  .HR {
     border: 1px dashed;
-    border-color: $main;
-    }
+    border-color: $blue-main;
+  }
 }
 
 .leftNav {
   margin-top: 10px;
-  padding-left: 10px!important;
-  padding-right: 10px!important;
-  padding-top: 10px!important;
-  padding-bottom: 10px!important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   border-radius: 5px;
   text-align: center;
-  background-color: $main;
-}
-
-.navTabs:hover,
-.navCurrent {
-  text-decoration: none !important;
-  font-size: 1.5rem;
-  color: $main;
-}
-.nav-link {
-  padding: 1rem !important;
-}
-
-.homeP {
-  font-size: 1.1rem;
-  font-style: italic;
-}
-
-.homeTitle {
-  text-align: center;
-}
-
-.myItem {
-  font-weight: 800;
-  font-style: $p-font;
-  border: 1px solid $black-main;
-  background-color: $white;
-  span {
-    color: $main;
+  background-color: $blue-main;
+  border: 5px $blue-main solid;
+  .myItem {
+    font-weight: 800;
+    font-style: $p-font;
+    border: 1px solid $blue-main;
+    background-color: white;
+    span {
+      color: $blue-main;
+    }
+  }
+  .navTabs:hover,
+  .navCurrent {
+    text-decoration: none !important;
+    font-size: 1.1rem;
+    color: $blue-main;
+  }
+  .nav-link {
+    padding: 1rem !important;
   }
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
   .nav-link {
     font-weight: 800px !important;
     padding: 0.3rem 1rem !important;
-    margin: 0;}
-  .myCol{
-    padding-left: 0px!important;
-    padding-right: 0px!important;
-    .card-body{
-      padding: 0.5rem
+    margin: 0;
+  }
+  .myCol {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    .card-body {
+      padding: 1.5rem;
     }
   }
-  
+
   .project {
     margin: 0;
     margin-top: 25px;
   }
-  .homeTitle{
+  .homeTitle {
     margin-top: 20px;
   }
 }

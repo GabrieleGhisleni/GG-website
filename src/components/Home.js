@@ -1,16 +1,14 @@
-import { List, Li } from "reactstrap";
+import { List, Row, Container, Col, ListI } from "reactstrap";
 import {NavLink} from 'react-router-dom';
 
 
 export const Home = () => {
   return (
-    <div className="container">
-      <div className="row" style={{ padding: "20px" }}>
-        <div className="col-12 col-md-1"></div>
-        <div className="col-12 col-md-6" style={{ marginTop: "10px" }}>
-          <h4 className="homeTitle">About Me<hr/></h4>
-          
-          <div className='homeP' style={{ textAlign: "justify" }}>
+    <Container>
+      <Row className='rowAbout text-center'>
+        <Col xs='12' md='8'>
+          <h4 className='title'>About Me<hr/></h4>
+          <div className='homeP'>
             Hi! My Name is Gabriele Ghisleni and i'm a Data Scientist with many
             interests. I work mainly in Python for all tasks in the data science
             world such as machine learning, data visualization, data
@@ -19,12 +17,12 @@ export const Home = () => {
             development such as HTML, CSS, Js and a professional framework such React.js.
             Along with this front-end skilss i've also a general knowledge on back-end development
             using frameworks such as Django and DBMS gained during my Master 
-            thesis in Data Science at the University of Trento. <span><NavLink to='/projects'>Check the projects! </NavLink></span>
+            thesis in Data Science at the University of Trento.
+            <br/><br/> <span >Check all the <NavLink to='/projects'>projects</NavLink> made untill now!</span>
           </div>
-        </div>
-        <div className="col-12 col-md-1"></div>
-        <div className="col-12 col-md align-middle " style={{ marginTop: "10px" }}>
-          <h4 className="homeTitle">Contacts<hr/></h4>
+          </Col>
+        <Col xs='12' md='4'>
+          <h4 className="contacts title">Contacts<hr/></h4>
           <div className="contactList ">
             <List type="unstyled">
               <li>
@@ -59,8 +57,8 @@ export const Home = () => {
               </li>
             </List>
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+      </Container>
   );
 };
