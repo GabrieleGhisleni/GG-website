@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/GG-website/static/css/main.669db433.chunk.css",
-    "main.js": "/GG-website/static/js/main.c9e5a71b.chunk.js",
-    "main.js.map": "/GG-website/static/js/main.c9e5a71b.chunk.js.map",
-    "runtime-main.js": "/GG-website/static/js/runtime-main.d2fe365f.js",
-    "runtime-main.js.map": "/GG-website/static/js/runtime-main.d2fe365f.js.map",
+    "main.css": "/GG-website/static/css/main.e4a375e8.chunk.css",
+    "main.js": "/GG-website/static/js/main.7fc199b5.chunk.js",
+    "main.js.map": "/GG-website/static/js/main.7fc199b5.chunk.js.map",
+    "runtime-main.js": "/GG-website/static/js/runtime-main.832d7646.js",
+    "runtime-main.js.map": "/GG-website/static/js/runtime-main.832d7646.js.map",
     "static/css/2.b9429390.chunk.css": "/GG-website/static/css/2.b9429390.chunk.css",
-    "static/js/2.c23c37e9.chunk.js": "/GG-website/static/js/2.c23c37e9.chunk.js",
-    "static/js/2.c23c37e9.chunk.js.map": "/GG-website/static/js/2.c23c37e9.chunk.js.map",
-    "static/js/3.96b107a6.chunk.js": "/GG-website/static/js/3.96b107a6.chunk.js",
-    "static/js/3.96b107a6.chunk.js.map": "/GG-website/static/js/3.96b107a6.chunk.js.map",
+    "static/js/2.af46f273.chunk.js": "/GG-website/static/js/2.af46f273.chunk.js",
+    "static/js/2.af46f273.chunk.js.map": "/GG-website/static/js/2.af46f273.chunk.js.map",
+    "static/js/3.d6b62c75.chunk.js": "/GG-website/static/js/3.d6b62c75.chunk.js",
+    "static/js/3.d6b62c75.chunk.js.map": "/GG-website/static/js/3.d6b62c75.chunk.js.map",
     "index.html": "/GG-website/index.html",
     "static/css/2.b9429390.chunk.css.map": "/GG-website/static/css/2.b9429390.chunk.css.map",
-    "static/css/main.669db433.chunk.css.map": "/GG-website/static/css/main.669db433.chunk.css.map",
-    "static/js/2.c23c37e9.chunk.js.LICENSE.txt": "/GG-website/static/js/2.c23c37e9.chunk.js.LICENSE.txt",
+    "static/css/main.e4a375e8.chunk.css.map": "/GG-website/static/css/main.e4a375e8.chunk.css.map",
+    "static/js/2.af46f273.chunk.js.LICENSE.txt": "/GG-website/static/js/2.af46f273.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/GG-website/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2fe365f.js",
+    "static/js/runtime-main.832d7646.js",
     "static/css/2.b9429390.chunk.css",
-    "static/js/2.c23c37e9.chunk.js",
-    "static/css/main.669db433.chunk.css",
-    "static/js/main.c9e5a71b.chunk.js"
+    "static/js/2.af46f273.chunk.js",
+    "static/css/main.e4a375e8.chunk.css",
+    "static/js/main.7fc199b5.chunk.js"
   ]
 }
