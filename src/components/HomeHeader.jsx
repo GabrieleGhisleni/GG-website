@@ -13,9 +13,8 @@ const HomeHeader = () => {
 
     const elementHeight = document.getElementById('main').clientHeight;
     const androidBar = elementHeight - window.innerHeight
-    var nav = document.getElementById('mainNav')
-    var navH = Number(getComputedStyle(nav).height.slice(0, -2))
-
+    var nav = document.getElementById('mainNav') 
+    var navH = Number(getComputedStyle(nav).height.slice(0, -2)) + 8
     setnavH(navH - androidBar)
   })
 

@@ -17,9 +17,9 @@ const NavBar = () => {
 
     return (
         <React.Fragment>
-            <Navbar dark className="mainNav" id='mainNav' fixed="top">
+            <Navbar dark className="mainNav"  fixed="top">
                 <Container>
-                    <NavbarBrand className="mr-auto">
+                    <NavbarBrand className="mr-auto" id='mainNav'>
                         <NavLink to="/home" to="/home">
                             <span className="navLogo">GG Portfolio</span>
                         </NavLink>
@@ -39,7 +39,8 @@ const NavBar = () => {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/hobbies" onClick={() => setOpen(!open)}>
+                                  
+                                    <NavLink  onClick={() => setOpen(!open)} className="nav-link" to="/hobbies">
                                         Hobbies
                                     </NavLink>
                                 </NavItem>
