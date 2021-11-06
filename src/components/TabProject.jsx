@@ -134,7 +134,7 @@ const RenderProjects = (data) => {
 
     return (
 
-        <Container className='projectContainer' >
+        <Container className='projectContainer'>
             <Row>
                 <Col xs={{ size: 10, offset: 1 }} className="col-lg-3 offset-lg-0 leftNav">
                     <Nav vertical tabs>

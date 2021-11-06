@@ -1,11 +1,19 @@
 import { Container, Col, Row } from "reactstrap";
 import TypeAnimation from "react-type-animation";
-import img from "./tmp/2_1.jpg";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  // var img = 'assets/images/2_1.jpg'
+  var img = 'assets/images/2_1.jpg'
   var Scroll = require('react-scroll');
   var scroll    = Scroll.animateScroll;
+  const [navH, setnavH] = useState(0)
+
+  useEffect(() => {
+    const elementHeight = document.getElementById('main').clientHeight;
+    const androidBar = elementHeight - window.innerHeight
+    var nav = document.getElementById('mainNav')
+    var navH = Number(getComputedStyle(nav).height.slice(0, -2))
+    setnavH(navH - androidBar)})
 
   const seq = [
     "Data Scientist ", 3000,
@@ -14,7 +22,7 @@ const Header = () => {
 
 
   return (
-    <Row className="firstPage backImg" style={{ backgroundImage: `url(${img})` }}>
+    <Row id='main' className="firstPage backImg" style={{ backgroundImage: `url(${img})` }}>
       <Container className="align-self-center">
         <Row className="text-center">
           <Col>
@@ -37,7 +45,7 @@ const Header = () => {
           <Col>
             <div class="arrow bounce">
               <a class="fa fa-arrow-down fa-2x" 
-              onClick={()=> scroll.scrollMore((window.innerHeight - 50))}>
+              onClick={()=> scroll.scrollMore((window.innerHeight - navH))}>
               </a>
             </div></Col>
         </Row>

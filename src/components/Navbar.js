@@ -17,7 +17,7 @@ const NavBar = () => {
 
     return (
         <React.Fragment>
-            <Navbar dark className="mainNav" fixed="top">
+            <Navbar dark className="mainNav" id='mainNav' fixed="top">
                 <Container>
                     <NavbarBrand className="mr-auto">
                         <NavLink to="/home" to="/home">
