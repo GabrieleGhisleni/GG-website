@@ -122,9 +122,15 @@ $blue-main: #3fa6e6 !important;
     text-decoration: none;
   }
   .navbar-toggler {
-    border: 2px solid;
-    border-color: $blue-main;
+    border-color: black;
+    .navbar-toggler-icon{
+      width: 35px;
+      height: 35px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzUiIGhlaWdodD0iMzUiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48bGluZWFyR3JhZGllbnQgaWQ9IkVJUGMwcVROQ1gwRXVqWXd0eEthWGFfTW11cFp0UGJudzY2X2dyMSIgeDE9IjEyLjA2NiIgeDI9IjM0Ljg5MSIgeTE9Ii4wNjYiIHkyPSIyMi44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4yMzciIHN0b3AtY29sb3I9IiMzYmM5ZjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9Ii44NSIgc3RvcC1jb2xvcj0iIzE1OTFkOCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNFSVBjMHFUTkNYMEV1all3dHhLYVhhX01tdXBadFBibnc2Nl9ncjEpIiBkPSJNNDMsMTVINWMtMS4xLDAtMi0wLjktMi0ydi0yYzAtMS4xLDAuOS0yLDItMmgzOGMxLjEsMCwyLDAuOSwyLDJ2MkM0NSwxNC4xLDQ0LjEsMTUsNDMsMTV6Ij48L3BhdGg+PGxpbmVhckdyYWRpZW50IGlkPSJFSVBjMHFUTkNYMEV1all3dHhLYVhiX01tdXBadFBibnc2Nl9ncjIiIHgxPSIxMi4wNjYiIHgyPSIzNC44OTEiIHkxPSIxMi4wNjYiIHkyPSIzNC44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4yMzciIHN0b3AtY29sb3I9IiMzYmM5ZjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9Ii44NSIgc3RvcC1jb2xvcj0iIzE1OTFkOCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNFSVBjMHFUTkNYMEV1all3dHhLYVhiX01tdXBadFBibnc2Nl9ncjIpIiBkPSJNNDMsMjdINWMtMS4xLDAtMi0wLjktMi0ydi0yYzAtMS4xLDAuOS0yLDItMmgzOGMxLjEsMCwyLDAuOSwyLDJ2MkM0NSwyNi4xLDQ0LjEsMjcsNDMsMjd6Ij48L3BhdGg+PGxpbmVhckdyYWRpZW50IGlkPSJFSVBjMHFUTkNYMEV1all3dHhLYVhjX01tdXBadFBibnc2Nl9ncjMiIHgxPSIxMi4wNjYiIHgyPSIzNC44OTEiIHkxPSIyNC4wNjYiIHkyPSI0Ni44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4yMzciIHN0b3AtY29sb3I9IiMzYmM5ZjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9Ii44NSIgc3RvcC1jb2xvcj0iIzE1OTFkOCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNFSVBjMHFUTkNYMEV1all3dHhLYVhjX01tdXBadFBibnc2Nl9ncjMpIiBkPSJNNDMsMzlINWMtMS4xLDAtMi0wLjktMi0ydi0yYzAtMS4xLDAuOS0yLDItMmgzOGMxLjEsMCwyLDAuOSwyLDJ2MkM0NSwzOC4xLDQ0LjEsMzksNDMsMzl6Ij48L3BhdGg+PC9zdmc+');
+    background-size: 100%; }
+    }
   }
+  
   .nav-link {
     font-weight: 700;
     color: $blue-main;
@@ -133,7 +139,7 @@ $blue-main: #3fa6e6 !important;
       text-decoration: underline;
     }
   }
-}
+
 
 
 .footer {

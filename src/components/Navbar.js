@@ -24,7 +24,7 @@ const NavBar = () => {
                             <span className="navLogo">GG Portfolio</span>
                         </NavLink>
                     </NavbarBrand>
-                    <NavbarToggler onClick={() => setOpen(!open)} />
+                    <NavbarToggler onClick={() => setOpen(!open)} style={{color:'blue'}}/>
                     <Collapse isOpen={open} navbar>
                         <Col className='text-center'>
                             <Nav navbar className="ml-auto">

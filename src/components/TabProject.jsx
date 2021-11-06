@@ -9,6 +9,7 @@ const RenderProjects = (data) => {
     var scroll    = Scroll.animateScroll;
 
     const [toOpen, setOpen] = useState(xs? null: "0")
+
     const location = useLocation()
 
     useEffect(() => {if (location.hash) scroll.scrollToTop({smooth: true})}, [location,])
