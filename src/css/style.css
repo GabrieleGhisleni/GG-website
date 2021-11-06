@@ -71,6 +71,7 @@
   .firstPage .animation {
     font-style: italic;
     padding-top: 10px;
+    font-size: 2rem;
     font-weight: 600 !important; }
     @media screen and (max-width: 600px) {
       .firstPage .animation {

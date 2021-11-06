@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavItem, NavLink, Row, Col, 
     Container, Button, TabContent, TabPane, Card, CardHeader, CardBody, Nav } from "reactstrap";
-import {useLocation} from 'react-router-dom'
+
 
 const RenderProjects = (data) => {
     const xs = window.innerWidth < 975
@@ -9,10 +9,7 @@ const RenderProjects = (data) => {
     var scroll    = Scroll.animateScroll;
 
     const [toOpen, setOpen] = useState(xs? null: "0")
-
-    const location = useLocation()
-
-    useEffect(() => {if (location.hash) scroll.scrollToTop({smooth: true})}, [location,])
+    useEffect(() => {scroll.scrollToTop({smooth: true})})
 
     function handleScroll(){
         if (!xs){scroll.scrollToTop({  smooth: true,})}
