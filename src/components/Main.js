@@ -20,7 +20,7 @@ const Main = () => {
         <Switch>
             <Route path='/home' component={()=> <div><Header/><Home/></div>}/>
             <Route path='/projects' component={() => RenderProjects(PROJECTS)}/>
-            <Route path='/hobbies' component={() => <TabProject data={HOBBIES}/>}/>
+            <Route path='/hobbies' component={() => RenderProjects(HOBBIES) }/>
             <Redirect to='/home'/>
         </Switch>
         <Footer/>

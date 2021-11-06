@@ -1,30 +1,32 @@
 import { useState, useEffect } from "react";
-import { NavItem, NavLink, Row, Col, Container, Button, TabContent, TabPane, Card, CardHeader, CardBody, Nav } from "reactstrap";
+import { NavItem, NavLink, Row, Col, 
+    Container, Button, TabContent, TabPane, Card, CardHeader, CardBody, Nav } from "reactstrap";
+import {useLocation} from 'react-router-dom'
 
 const RenderProjects = (data) => {
-    const xs = window.innerWidth<600
+    const xs = window.innerWidth < 975
     var Scroll   = require('react-scroll');
-    var Element  = Scroll.Element;
-    var scroller = Scroll.scroller;
+    var scroll    = Scroll.animateScroll;
+
     const [toOpen, setOpen] = useState(xs? null: "0")
+    const location = useLocation()
 
-    useEffect(() => {
-        // scroller.scrollToTop()
-        if (toOpen){
-            scroller.scrollTo('myScrollToElement',{
-                duration: 1000,
-                delay: 10,
-                smooth: true,
-            })
-        }
-      });
+    useEffect(() => {if (location.hash) scroll.scrollToTop({smooth: true})}, [location,])
 
+    function handleScroll(){
+        if (!xs){scroll.scrollToTop({  smooth: true,})}
+        else{
+            var doc = document.getElementById("content")
+            var rect = doc.getBoundingClientRect();
+            scroll.scrollTo(rect.top - 50 )
+        }}
 
     const navTab = data.map((prj) => {
         return (
             <NavItem>
                 <NavLink className="myItem" onClick={() => { 
                     setOpen(prj.id.toString()) 
+                    handleScroll()
                     }}>
                     <span className="navTabs"> {prj.name}</span>
                 </NavLink>
@@ -114,7 +116,9 @@ const RenderProjects = (data) => {
                                         <Button
                                             className="btn bg-transparent"
                                             style={{ borderRadius: "30px" }}
-                                            onClick={() => Scroll.scrollToTop()}>
+                                            onClick={() => {  
+                                                if (xs){ setOpen(null)}
+                                                else{ scroll.scrollToTop({  smooth: true})}}}>
                                             <i className="fa fa-angle-double-up" style={{ color: "black" }}></i>
                                         </Button>
                                     </Col>
@@ -123,22 +127,22 @@ const RenderProjects = (data) => {
                         </Col>
                     </Row>
                 </TabPane>
-                
+    
             </TabContent>
         );
     });
 
     return (
 
-        <Container style={{ marginTop: "70px" }}>
+        <Container className='projectContainer' >
             <Row>
-                <Col xs={{ size: 10, offset: 1 }} className="col-md-auto leftNav">
+                <Col xs={{ size: 10, offset: 1 }} className="col-lg-3 offset-lg-0 leftNav">
                     <Nav vertical tabs>
                         {navTab}
                     </Nav>
                 </Col>
-                <Element name="myScrollToElement"></Element>
-                <Col>
+
+                <Col md={12} lg={9} id='content'>
                     {contentTab}
                 </Col>
             </Row>

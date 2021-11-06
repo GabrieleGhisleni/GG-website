@@ -57,6 +57,7 @@ class TabProject extends Component {
     const navTab = data.map((prj) => {
       let activation = this.state.activeTab === prj.id.toString();
       return (
+        <Nav navbar className="ml-auto">
         <NavItem>
           <NavLink
             className={classnames({ active: activation }, "myItem")}
@@ -65,9 +66,10 @@ class TabProject extends Component {
               this.scroll();
             }}
           >
-            <span className="navTabs"> {prj.name}</span>
+            <a className="navTabs"> {prj.name}</a>
           </NavLink>
         </NavItem>
+        </Nav>
       );
     });
 

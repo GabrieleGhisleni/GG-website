@@ -3,12 +3,18 @@ import TypeAnimation from "react-type-animation";
 import img from "./tmp/2_1.jpg";
 
 const Header = () => {
+  // var img = 'assets/images/2_1.jpg'
+  var Scroll = require('react-scroll');
+  var scroll    = Scroll.animateScroll;
+
   const seq = [
-    "Data Scientist ", 2000,
-    "Web Developer ", 2000,
+    "Data Scientist ", 3000,
+    "Web Developer ", 3000,
   ];
+
+
   return (
-    <Row className="firstPage backImg" style={{backgroundImage: `url(${img})`}}>
+    <Row className="firstPage backImg" style={{ backgroundImage: `url(${img})` }}>
       <Container className="align-self-center">
         <Row className="text-center">
           <Col>
@@ -26,6 +32,14 @@ const Header = () => {
               repeat={Infinity}
             />
           </Col>
+        </Row>
+        <Row style={{ marginTop: "100px" }}>
+          <Col>
+            <div class="arrow bounce">
+              <a class="fa fa-arrow-down fa-2x" 
+              onClick={()=> scroll.scrollMore((window.innerHeight - 50))}>
+              </a>
+            </div></Col>
         </Row>
       </Container>
     </Row>

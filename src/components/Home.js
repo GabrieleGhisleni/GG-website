@@ -18,7 +18,7 @@ export const Home = () => {
             Along with this front-end skilss i've also a general knowledge on back-end development
             using frameworks such as Django and DBMS gained during my Master 
             thesis in Data Science at the University of Trento.
-            <br/><br/> <span >Check all the <NavLink to='/projects'>projects</NavLink> made untill now!</span>
+            <br/><br/> <span >Check all the <NavLink to='/projects#all'>projects</NavLink> made untill now!</span>
           </div>
           </Col>
         <Col xs='12' md='4'>

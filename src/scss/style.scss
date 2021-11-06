@@ -8,12 +8,45 @@ $p-font: "Open Sans", sans-serif !important;
 $main-black: #000000 !important;
 $blue-main: #3fa6e6 !important;
 
-
-.handlerData{
-  
+.projectContainer{
+  min-height: calc(100vh - 160px);
+  margin-top: 70px;
+  scroll-behavior: smooth;
 }
+
+.leftNav {
+  margin-top: 10px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-radius: 5px;
+  text-align: center;
+  background-color: $blue-main;
+  border: 5px solid;
+  .myItem {
+    font-weight: 800;
+    font-style: $p-font;
+    border: 1px solid $blue-main;
+    background-color: white;
+    span {
+      color: $blue-main;
+    }
+  }
+  .navTabs:hover,
+  .navCurrent {
+    font-size: 1.1rem;
+    color: $blue-main;
+  }
+  .nav-link {
+    padding: 1rem !important;
+    cursor: pointer;
+
+  }
+}
+
 .rowAbout {
-  min-height: calc(80vh);
+  min-height: calc(100vh - 190px);
   padding-top: 30px;
   margin-top:50px;
 
@@ -86,7 +119,7 @@ $blue-main: #3fa6e6 !important;
     font-weight: 800;
     font-family: $main-font;
     color: $blue-main;
-    text-decoration: none !important;
+    text-decoration: none;
   }
   .navbar-toggler {
     border: 2px solid;
@@ -103,7 +136,6 @@ $blue-main: #3fa6e6 !important;
 }
 
 
-
 .footer {
   padding-top: 15px;
   padding-bottom: 5px;
@@ -117,7 +149,6 @@ $blue-main: #3fa6e6 !important;
 
 
 
-
 .myFont {
   font-family: $p-font;
   font-weight: 800;
@@ -125,8 +156,7 @@ $blue-main: #3fa6e6 !important;
 }
 
 .project {
-  background-color: wheat;
-  border: 2px black;
+  background-color: white;
   border-radius: 20px !important;
   margin-top: 10px;
   padding: 10px;
@@ -176,39 +206,34 @@ $blue-main: #3fa6e6 !important;
   }
 }
 
-.leftNav {
-  margin-top: 10px;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  border-radius: 5px;
+
+
+.arrow {
+  color:$blue-main;
   text-align: center;
-  background-color: $blue-main;
-  border: 5px $blue-main solid;
-  .myItem {
-    font-weight: 800;
-    font-style: $p-font;
-    border: 1px solid $blue-main;
-    background-color: white;
-    span {
-      color: $blue-main;
-    }
-  }
-  .navTabs:hover,
-  .navCurrent {
-    text-decoration: none !important;
-    font-size: 1.1rem;
-    color: $blue-main;
-  }
-  .nav-link {
-    padding: 1rem !important;
+  margin: 8% 0;
+  .fa{
+
+    cursor: pointer;
   }
 }
+.bounce {
+  -moz-animation: bounce 5s infinite;
+  -webkit-animation: bounce 5s infinite;
+  animation: bounce 10s infinite;
+}
 
-
-
-
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 
 
 
