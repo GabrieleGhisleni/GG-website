@@ -220,7 +220,8 @@ $blue-main: #3fa6e6 !important;
   text-align: center;
   margin: 8% 0;
   .fa{
-
+    text-decoration: none!important;
+    color:$blue-main;
     cursor: pointer;
   }
 }

@@ -18,6 +18,8 @@ const HomeHeader = () => {
     setnavH(navH - androidBar)
   })
 
+
+
   const seq = [
     "Data Scientist ", 3000,
     "Web Developer ", 3000,

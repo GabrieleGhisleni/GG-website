@@ -164,6 +164,8 @@
   text-align: center;
   margin: 8% 0; }
   .arrow .fa {
+    text-decoration: none !important;
+    color: #3fa6e6 !important;
     cursor: pointer; }
 
 .bounce {

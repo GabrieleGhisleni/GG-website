@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 const HomeDescription = () => {
     return (
-        <Container>
+        <Container id='homeDescription'>
             <Row className='rowAbout text-center'>
                 <Col xs='12' md='8'>
                     <h4 className='title'>About Me<hr /></h4>
