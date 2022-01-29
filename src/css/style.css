@@ -31,8 +31,7 @@
 
 .rowAbout {
   min-height: calc(100vh - 190px);
-  padding-top: 30px;
-  margin-top: 50px; }
+  padding-top: 30px; }
   @media screen and (max-width: 600px) {
     .rowAbout {
       padding: 5px;
@@ -159,6 +158,34 @@
     border: 1px dashed;
     border-color: #3fa6e6 !important; }
 
+@media screen and (max-width: 768px) {
+  .nav-link {
+    font-weight: 800px !important;
+    padding: 0.3rem 1rem !important;
+    margin: 0; }
+  .myCol {
+    padding-left: 0px !important;
+    padding-right: 0px !important; }
+    .myCol .card-body {
+      padding: 1.5rem; }
+  .project {
+    margin: 0;
+    margin-top: 25px; }
+  .homeTitle {
+    margin-top: 20px; } }
+
+.button-home {
+  margin-top: 50px !important;
+  margin-bottom: 35px !important;
+  font-family: inherit;
+  font-size: 1.5rem !important;
+  color: #fff;
+  background: linear-gradient(45deg, #01609c 0%, #000000 88%);
+  border-radius: 15px !important; }
+  .button-home #project-button {
+    color: white;
+    text-decoration: none; }
+
 .arrow {
   color: #3fa6e6 !important;
   text-align: center;
@@ -180,19 +207,3 @@
     transform: translateY(-30px); }
   60% {
     transform: translateY(-15px); } }
-
-@media screen and (max-width: 768px) {
-  .nav-link {
-    font-weight: 800px !important;
-    padding: 0.3rem 1rem !important;
-    margin: 0; }
-  .myCol {
-    padding-left: 0px !important;
-    padding-right: 0px !important; }
-    .myCol .card-body {
-      padding: 1.5rem; }
-  .project {
-    margin: 0;
-    margin-top: 25px; }
-  .homeTitle {
-    margin-top: 20px; } }

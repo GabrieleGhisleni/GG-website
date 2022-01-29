@@ -38,12 +38,12 @@ const NavBar = () => {
                                         Projects
                                     </NavLink>
                                 </NavItem>
-                                <NavItem>
+                                {/* <NavItem>
                                   
                                     <NavLink  onClick={() => setOpen(!open)} className="nav-link" to="/hobbies">
                                         Hobbies
                                     </NavLink>
-                                </NavItem>
+                                </NavItem> */}
                             </Nav>
                             </Col>
                     </Collapse>

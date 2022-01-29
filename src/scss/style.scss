@@ -48,7 +48,7 @@ $blue-main: #3fa6e6 !important;
 .rowAbout {
   min-height: calc(100vh - 190px);
   padding-top: 30px;
-  margin-top:50px;
+  // margin-top:50px;
 
   @media screen and (max-width: 600px) {
     padding: 5px;
@@ -215,35 +215,6 @@ $blue-main: #3fa6e6 !important;
 
 
 
-.arrow {
-  color:$blue-main;
-  text-align: center;
-  margin: 8% 0;
-  .fa{
-    text-decoration: none!important;
-    color:$blue-main;
-    cursor: pointer;
-  }
-}
-.bounce {
-  -moz-animation: bounce 5s infinite;
-  -webkit-animation: bounce 5s infinite;
-  animation: bounce 10s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
-
 
 @media screen and (max-width: 768px) {
   .nav-link {
@@ -267,3 +238,50 @@ $blue-main: #3fa6e6 !important;
     margin-top: 20px;
   }
 }
+
+
+.button-home {
+  margin-top: 50px!important;
+  margin-bottom: 35px!important;
+  font-family: inherit;
+  font-size: 1.5rem!important;
+  color: #fff;
+  background: linear-gradient(45deg, #01609c 0%, #000000 88%);
+  border-radius: 15px!important;
+  #project-button{
+    color:white;
+    text-decoration: none;
+  }
+
+}
+ 
+ 
+ 
+ .arrow {
+   color:$blue-main;
+   text-align: center;
+   margin: 8% 0;
+   .fa{
+     text-decoration: none!important;
+     color:$blue-main;
+     cursor: pointer;
+   }
+ }
+ .bounce {
+   -moz-animation: bounce 5s infinite;
+   -webkit-animation: bounce 5s infinite;
+   animation: bounce 10s infinite;
+ }
+ 
+ @keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+     transform: translateY(0);
+   }
+   40% {
+     transform: translateY(-30px);
+   }
+   60% {
+     transform: translateY(-15px);
+   }
+ }
+ 
