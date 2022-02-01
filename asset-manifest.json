@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/GG-website/static/css/main.2e19d2e4.chunk.css",
+    "main.css": "/GG-website/static/css/main.2e6b7a2c.chunk.css",
     "main.js": "/GG-website/static/js/main.ef5f2d97.chunk.js",
     "main.js.map": "/GG-website/static/js/main.ef5f2d97.chunk.js.map",
     "runtime-main.js": "/GG-website/static/js/runtime-main.900d9410.js",
@@ -12,7 +12,7 @@
     "static/js/3.67713dcd.chunk.js.map": "/GG-website/static/js/3.67713dcd.chunk.js.map",
     "index.html": "/GG-website/index.html",
     "static/css/2.8d46d348.chunk.css.map": "/GG-website/static/css/2.8d46d348.chunk.css.map",
-    "static/css/main.2e19d2e4.chunk.css.map": "/GG-website/static/css/main.2e19d2e4.chunk.css.map",
+    "static/css/main.2e6b7a2c.chunk.css.map": "/GG-website/static/css/main.2e6b7a2c.chunk.css.map",
     "static/js/2.147a9892.chunk.js.LICENSE.txt": "/GG-website/static/js/2.147a9892.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/GG-website/static/media/fontawesome-webfont.f691f37e.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.900d9410.js",
     "static/css/2.8d46d348.chunk.css",
     "static/js/2.147a9892.chunk.js",
-    "static/css/main.2e19d2e4.chunk.css",
+    "static/css/main.2e6b7a2c.chunk.css",
     "static/js/main.ef5f2d97.chunk.js"
   ]
 }
