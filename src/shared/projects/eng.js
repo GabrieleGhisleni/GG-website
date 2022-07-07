@@ -1,3 +1,5 @@
+import { PROJECTS_LIST } from "./project_list";
+
 export const Engineering = {
   id: 1,
   name: "Data Engineering",
@@ -24,14 +26,9 @@ export const Engineering = {
       times on the usage of Docker.
     </p>
   ),
-  projectName: [
-    "Forecasting imbalance risks for Italian power grids using renewable energy predictions.",
-  ],
-  projectDescription: [
-    "In this projects we combined statistical method as well with big data tools, in particular we built a web application that given the forecast weather is able to predict and display the forecasted production of renewable energies and consequently imbalances on the italian grid. \n To do this we used different technologies such as Docker, MySql, Redis, MQTT and Django to creating the web-application. Since the nature of the data we mainly used non-linear models for the predictions.",
-  ],
-  projectGit: ["https://github.com/GabrieleGhisleni/EnergyProject"],
-  pdf: [
-    "https://github.com/GabrieleGhisleni/EnergyProject/blob/master/bdt2021Ghisleni_Pomella_report.pdf",
-  ],
+
+  projects: [
+    PROJECTS_LIST.italian_grid_imbalance,
+    PROJECTS_LIST.conjoint_form
+  ]
 };

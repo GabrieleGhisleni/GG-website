@@ -57,10 +57,12 @@ $blue-main: #3fa6e6 !important;
   }
 
   .homeP {
-    font-size: 1.3rem;
+    // font-size: 1.5rem;
+    font-size: 1.7rem;
     font-style: italic;
     text-align: justify;
   }
+  
 
   .contacts {
     text-align: center;  
@@ -135,7 +137,7 @@ $blue-main: #3fa6e6 !important;
   .nav-link {
     font-weight: 700;
     color: $blue-main;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     &:hover {
       text-decoration: underline;
     }
@@ -167,7 +169,7 @@ $blue-main: #3fa6e6 !important;
   border-radius: 20px !important;
   margin-top: 10px;
   padding: 10px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   .cardH {
     font-weight: 900 !important;
     text-align: center;
@@ -243,18 +245,22 @@ $blue-main: #3fa6e6 !important;
 .button-home {
   margin-top: 50px!important;
   margin-bottom: 35px!important;
+  min-height: 30px!important;
+  text-align: center;
   font-family: inherit;
   font-size: 1.5rem!important;
   color: #fff;
   background: linear-gradient(45deg, #01609c 0%, #000000 88%);
   border-radius: 15px!important;
+  line-height: 50px;
   #project-button{
     color:white;
     text-decoration: none;
   }
 
 }
- 
+
+
  
  
  .arrow {
@@ -285,3 +291,15 @@ $blue-main: #3fa6e6 !important;
    }
  }
  
+
+
+  
+ @media (min-width: 1800px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 160px;
+  }}
+
+@media (min-width: 1500px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1340px;
+  }}

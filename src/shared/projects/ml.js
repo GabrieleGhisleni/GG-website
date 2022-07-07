@@ -1,3 +1,6 @@
+import { PROJECTS_LIST } from "./project_list";
+
+
 export const ML = {
   id: 0,
   name: "Machine Learning",
@@ -18,22 +21,24 @@ export const ML = {
       The final exams consists was a challenge in which we have to build a CNN
       able to compare and retrive images by similarity. The following link go to
       GitHub where is hosted the code and report of that projects.
+      <br />
+      <br />
+      I Recently follow a MLOPS course from coursera understanding the best practise
+      of ML in production, the important of monitoring and pipelines. Together with 
+      it I also followed a NLP course using HuggingFace Transformers.
     </p>
   ),
 
-  projectName: [
-    "Image Retrival with Convolutional Neural Network",
-    "Statistical Notes",
-  ],
-  projectGit: [
-    "https://github.com/GabrieleGhisleni/ImageRetrival-ConvNN",
-    "...",
-  ],
-  projectDescription: [
-    "Extract features using convolutional neural network and compare images by similarity",
-    "Notes from university lectures with all the topics discussed, to be uploaded yet",
-  ],
-  pdf: [
-    "https://github.com/GabrieleGhisleni/ImageRetrival-ConvNN/blob/master/Applied_Machine_Learning%20report.pdf",
-  ],
-};
+  // to adjust the order just swap the elements
+  projects: [
+    PROJECTS_LIST.ml_blog,
+    PROJECTS_LIST.uda,
+    PROJECTS_LIST.mlops,
+    PROJECTS_LIST.italian_grid_imbalance,
+    PROJECTS_LIST.image_retrival,
+    PROJECTS_LIST.stock_prediction,
+    PROJECTS_LIST.simple_distil,
+    PROJECTS_LIST.simple_bert,
+    PROJECTS_LIST.statistical_notes,
+  ]
+}

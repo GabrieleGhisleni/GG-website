@@ -1,21 +1,19 @@
-import { ML } from "./ml";
-import { Engineering } from "./eng";
-import { Front } from "./front";
-import { Back } from "./back";
-import { Geo } from "./geo";
-import { Customer } from "./customer";
-import { Project } from "./prj";
-import { Viz } from "./viz";
-import { CSS } from "./css";
+import { ML } from "./projects/ml";
+import { Engineering } from "./projects/eng";
+import { Front } from "./projects/front";
+import { Geo } from "./projects/geo";
+// import { Customer } from "./projects/customer";
+// import { Project } from "./projects/prj";
+import { Viz } from "./projects/viz";
+import { CSS } from "./projects/css";
 
 export const PROJECTS = [
   ML,
-  Engineering,
   Front,
-  Back,
-  CSS,
-  Geo,
-  Customer,
-  Project,
   Viz,
+  Geo,
+  Engineering,
+  // Customer,
+  // Project,
+  CSS,
 ];

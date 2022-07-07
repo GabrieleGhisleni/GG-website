@@ -38,7 +38,7 @@
       margin: 5px;
       margin-top: 35px; } }
   .rowAbout .homeP {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-style: italic;
     text-align: justify; }
   .rowAbout .contacts {
@@ -100,7 +100,7 @@
 .nav-link {
   font-weight: 700;
   color: #3fa6e6 !important;
-  font-size: 1.2rem; }
+  font-size: 1.5rem; }
   .nav-link:hover {
     text-decoration: underline; }
 
@@ -123,7 +123,7 @@
   border-radius: 20px !important;
   margin-top: 10px;
   padding: 10px;
-  font-size: 1.1rem; }
+  font-size: 1.3rem; }
   .project .cardH {
     font-weight: 900 !important;
     text-align: center;
@@ -177,11 +177,14 @@
 .button-home {
   margin-top: 50px !important;
   margin-bottom: 35px !important;
+  min-height: 30px !important;
+  text-align: center;
   font-family: inherit;
   font-size: 1.5rem !important;
   color: #fff;
   background: linear-gradient(45deg, #01609c 0%, #000000 88%);
-  border-radius: 15px !important; }
+  border-radius: 15px !important;
+  line-height: 50px; }
   .button-home #project-button {
     color: white;
     text-decoration: none; }
@@ -207,3 +210,11 @@
     transform: translateY(-30px); }
   60% {
     transform: translateY(-15px); } }
+
+@media (min-width: 1800px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 160px; } }
+
+@media (min-width: 1500px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1340px; } }

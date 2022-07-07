@@ -26,6 +26,9 @@ const HomeDescription = () => {
                     knowledge on backend development using Python frameworks such as
                     Django, Django Rest API.
                     </div>
+                        {/* <button className="button-home btn-lg form-control ">
+                            <NavLink to='/projects' id="project-button">{projectName}</NavLink>
+                        </button> */}
                     {
                         window.innerWidth < 768?
                         <button className="button-home btn-lg ">

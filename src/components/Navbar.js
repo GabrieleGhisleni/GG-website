@@ -20,7 +20,7 @@ const NavBar = () => {
             <Navbar dark className="mainNav"  fixed="top">
                 <Container>
                     <NavbarBrand className="mr-auto" id='mainNav'>
-                        <NavLink to="/home" to="/home">
+                        <NavLink to="/home">
                             <span className="navLogo">GG Portfolio</span>
                         </NavLink>
                     </NavbarBrand>
@@ -29,7 +29,7 @@ const NavBar = () => {
                         <Col className='text-center'>
                             <Nav navbar className="ml-auto">
                                 <NavItem>
-                                    <NavLink to="/" className="nav-link" to="/home" onClick={() => setOpen(!open)}>
+                                    <NavLink className="nav-link" to="/home" onClick={() => setOpen(!open)}>
                                         Home
                                     </NavLink>
                                 </NavItem>

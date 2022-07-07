@@ -21,7 +21,7 @@ const HomeHeader = () => {
   var typeAnim = [];
   for (let i = 0; i < 100; i++) {
     typeAnim.push(
-      <span>
+      <span key={i}>
         <Typist.Backspace count={17} delay={3000} />
         <span> Machine Learning Engineer </span>
         <Typist.Backspace count={27} delay={3000} />
@@ -48,8 +48,8 @@ const HomeHeader = () => {
         </Row>
         <Row style={{ marginTop: "100px" }}>
           <Col>
-            <div class="arrow bounce">
-              <span class="fa fa-arrow-down fa-2x" onClick={() => scroll.scrollMore((window.innerHeight - navH))}></span>
+            <div className="arrow bounce">
+              <span className="fa fa-arrow-down fa-2x" onClick={() => scroll.scrollMore((window.innerHeight - navH))}></span>
             </div>
           </Col>
         </Row>

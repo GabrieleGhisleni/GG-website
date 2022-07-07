@@ -1,3 +1,5 @@
+import { PROJECTS_LIST } from "./project_list";
+
 export const CSS = {
   id: 9,
   name: "Computational Social Science",
@@ -12,14 +14,8 @@ export const CSS = {
     </p>
   ),
 
-  projectName: ["Semantic Network Analysis in Twitter of No-Vax Movement. "],
-  projectDescription: [
-    <p>
-      this project aimed to detect subgroups in the community and understanding
-      the spread of them toghether with an analysis of the ecology sources used
-      in the debate.
-    </p>,
-  ],
-  projectGit: ["https://github.com/GabrieleGhisleni/Twitter-Social-Analysis"],
-  pdf: ['https://github.com/GabrieleGhisleni/Twitter-Social-Analysis/blob/master/Computational_Social_Science.pdf'],
+  projects: [
+    PROJECTS_LIST.twitter_css
+  ]
+
 };
