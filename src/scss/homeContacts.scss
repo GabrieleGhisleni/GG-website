@@ -1,0 +1,33 @@
+.contacts {
+  text-align: center;
+
+  .title {
+    margin-top: 2em;
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    color: #0077b6;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    padding-bottom: 5px;
+  }
+
+}
+
+.contactList li {
+  text-align: center;
+  padding: 5px;
+
+  a,
+  .footer a {
+    color: black;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .contacts .title {
+    margin-top: 1em;
+  }
+}

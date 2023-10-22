@@ -1,220 +1,171 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@1,300&display=swap");
-.projectContainer {
-  min-height: calc(100vh - 160px);
-  margin-top: 70px;
-  scroll-behavior: smooth; }
-
-.leftNav {
-  margin-top: 10px;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  border-radius: 5px;
-  text-align: center;
-  background-color: #3fa6e6 !important;
-  border: 5px solid; }
-  .leftNav .myItem {
-    font-weight: 800;
-    font-style: "Open Sans", sans-serif !important;
-    border: 1px solid #3fa6e6 !important;
-    background-color: white; }
-    .leftNav .myItem span {
-      color: #3fa6e6 !important; }
-  .leftNav .navTabs:hover,
-  .leftNav .navCurrent {
-    font-size: 1.1rem;
-    color: #3fa6e6 !important; }
-  .leftNav .nav-link {
-    padding: 1rem !important;
-    cursor: pointer; }
-
-.rowAbout {
-  min-height: calc(100vh - 190px);
-  padding-top: 30px; }
-  @media screen and (max-width: 600px) {
-    .rowAbout {
-      padding: 5px;
-      margin: 5px;
-      margin-top: 35px; } }
-  .rowAbout .homeP {
-    font-size: 1.7rem;
-    font-style: italic;
-    text-align: justify; }
-  .rowAbout .contacts {
-    text-align: center; }
-    @media screen and (max-width: 600px) {
-      .rowAbout .contacts {
-        margin-top: 55px; } }
-  .rowAbout .contactList li {
-    text-align: center;
-    padding: 5px; }
-    .rowAbout .contactList li a,
-    .rowAbout .contactList li .footer a {
-      color: black; }
-  .rowAbout .title {
-    font-family: "Raleway", sans-serif !important;
-    color: #3fa6e6 !important;
-    font-weight: 900;
-    font-size: 2rem; }
-
-.firstPage {
-  width: 100%;
-  height: calc(100vh);
-  margin: 0 !important;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: "Raleway", sans-serif !important;
-  color: wheat; }
-  .firstPage .animation {
-    font-style: italic;
-    padding-top: 10px;
-    font-size: 2rem;
-    font-weight: 600 !important; }
-    @media screen and (max-width: 600px) {
-      .firstPage .animation {
-        font-size: 1.5rem; } }
-  .firstPage .name {
-    font-size: 5rem;
-    color: wheat; }
-    @media screen and (max-width: 600px) {
-      .firstPage .name {
-        font-size: 3rem; } }
-
-.mainNav {
-  background-color: #000000 !important; }
-  .mainNav .navLogo {
-    font-weight: 800;
-    font-family: "Raleway", sans-serif !important;
-    color: #3fa6e6 !important;
-    text-decoration: none; }
-  .mainNav .navbar-toggler {
-    border-color: black; }
-    .mainNav .navbar-toggler .navbar-toggler-icon {
-      width: 35px;
-      height: 35px;
-      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzUiIGhlaWdodD0iMzUiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48bGluZWFyR3JhZGllbnQgaWQ9IkVJUGMwcVROQ1gwRXVqWXd0eEthWGFfTW11cFp0UGJudzY2X2dyMSIgeDE9IjEyLjA2NiIgeDI9IjM0Ljg5MSIgeTE9Ii4wNjYiIHkyPSIyMi44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4yMzciIHN0b3AtY29sb3I9IiMzYmM5ZjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9Ii44NSIgc3RvcC1jb2xvcj0iIzE1OTFkOCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNFSVBjMHFUTkNYMEV1all3dHhLYVhhX01tdXBadFBibnc2Nl9ncjEpIiBkPSJNNDMsMTVINWMtMS4xLDAtMi0wLjktMi0ydi0yYzAtMS4xLDAuOS0yLDItMmgzOGMxLjEsMCwyLDAuOSwyLDJ2MkM0NSwxNC4xLDQ0LjEsMTUsNDMsMTV6Ij48L3BhdGg+PGxpbmVhckdyYWRpZW50IGlkPSJFSVBjMHFUTkNYMEV1all3dHhLYVhiX01tdXBadFBibnc2Nl9ncjIiIHgxPSIxMi4wNjYiIHgyPSIzNC44OTEiIHkxPSIxMi4wNjYiIHkyPSIzNC44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4yMzciIHN0b3AtY29sb3I9IiMzYmM5ZjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9Ii44NSIgc3RvcC1jb2xvcj0iIzE1OTFkOCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNFSVBjMHFUTkNYMEV1all3dHhLYVhiX01tdXBadFBibnc2Nl9ncjIpIiBkPSJNNDMsMjdINWMtMS4xLDAtMi0wLjktMi0ydi0yYzAtMS4xLDAuOS0yLDItMmgzOGMxLjEsMCwyLDAuOSwyLDJ2MkM0NSwyNi4xLDQ0LjEsMjcsNDMsMjd6Ij48L3BhdGg+PGxpbmVhckdyYWRpZW50IGlkPSJFSVBjMHFUTkNYMEV1all3dHhLYVhjX01tdXBadFBibnc2Nl9ncjMiIHgxPSIxMi4wNjYiIHgyPSIzNC44OTEiIHkxPSIyNC4wNjYiIHkyPSI0Ni44OTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9Ii4yMzciIHN0b3AtY29sb3I9IiMzYmM5ZjMiPjwvc3RvcD48c3RvcCBvZmZzZXQ9Ii44NSIgc3RvcC1jb2xvcj0iIzE1OTFkOCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNFSVBjMHFUTkNYMEV1all3dHhLYVhjX01tdXBadFBibnc2Nl9ncjMpIiBkPSJNNDMsMzlINWMtMS4xLDAtMi0wLjktMi0ydi0yYzAtMS4xLDAuOS0yLDItMmgzOGMxLjEsMCwyLDAuOSwyLDJ2MkM0NSwzOC4xLDQ0LjEsMzksNDMsMzl6Ij48L3BhdGg+PC9zdmc+");
-      background-size: 100%; }
-
-.nav-link {
-  font-weight: 700;
-  color: #3fa6e6 !important;
-  font-size: 1.5rem; }
-  .nav-link:hover {
-    text-decoration: underline; }
-
 .footer {
   padding-top: 15px;
   padding-bottom: 5px;
   border: solid black 1px;
   background-color: #000000 !important;
-  margin-top: 30px; }
-  .footer * {
-    color: #3fa6e6 !important; }
+  margin-top: 30px;
+}
+.footer * {
+  color: #3fa6e6;
+}
 
-.myFont {
-  font-family: "Open Sans", sans-serif !important;
-  font-weight: 800;
-  font-style: normal; }
-
-.project {
-  background-color: white;
-  border-radius: 20px !important;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 1.3rem; }
-  .project .cardH {
-    font-weight: 900 !important;
-    text-align: center;
-    background-color: #3fa6e6 !important;
-    color: black;
-    font-size: 1.5rem; }
-  .project .related {
-    text-align: center;
-    font-weight: 900;
-    border-radius: 10px;
-    background-color: #3fa6e6 !important;
-    font-family: "Raleway", sans-serif !important;
-    color: black; }
-
-.gitLink {
-  margin: 30px 5px;
-  border-radius: 10px;
-  text-align: center; }
-  .gitLink h6 {
-    font-size: 1.1rem;
-    font-weight: 900 !important; }
-    .gitLink h6 a {
-      font-family: "Raleway", sans-serif !important;
-      color: black; }
-  .gitLink p {
-    text-align: justify; }
-  .gitLink .body {
-    margin-top: 5px;
-    color: black;
-    text-align: center; }
-  .gitLink .HR {
-    border: 1px dashed;
-    border-color: #3fa6e6 !important; }
-
-@media screen and (max-width: 768px) {
-  .nav-link {
-    font-weight: 800px !important;
-    padding: 0.3rem 1rem !important;
-    margin: 0; }
-  .myCol {
-    padding-left: 0px !important;
-    padding-right: 0px !important; }
-    .myCol .card-body {
-      padding: 1.5rem; }
-  .project {
-    margin: 0;
-    margin-top: 25px; }
-  .homeTitle {
-    margin-top: 20px; } }
-
-.button-home {
-  margin-top: 50px !important;
-  margin-bottom: 35px !important;
-  min-height: 30px !important;
+.container-home-first {
+  height: 100vh;
+  padding-top: 33.3333333333vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container-home-first .home-first {
+  color: wheat;
+  font-family: "Raleway", sans-serif !important;
+}
+.container-home-first .home-first .animation {
+  font-style: italic;
+  padding-top: 10px;
+  font-size: 2rem;
+  font-weight: 600 !important;
+}
+@media screen and (max-width: 600px) {
+  .container-home-first .home-first .animation {
+    font-size: 1.5rem;
+  }
+}
+.container-home-first .home-first .home-main-name {
+  font-size: 5rem;
+}
+@media screen and (max-width: 600px) {
+  .container-home-first .home-first .home-main-name {
+    font-size: 2rem;
+  }
+}
+.container-home-first .home-first .circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 70px;
+  border: 5px solid rgba(0, 0, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 3s infinite;
+}
+.container-home-first .home-first .circle .arrow {
+  color: #3fa6e6;
   text-align: center;
-  font-family: inherit;
-  font-size: 1.5rem !important;
-  color: #fff;
-  background: linear-gradient(45deg, #01609c 0%, #000000 88%);
-  border-radius: 15px !important;
-  line-height: 50px; }
-  .button-home #project-button {
-    color: white;
-    text-decoration: none; }
-
-.arrow {
-  color: #3fa6e6 !important;
-  text-align: center;
-  margin: 8% 0; }
-  .arrow .fa {
-    text-decoration: none !important;
-    color: #3fa6e6 !important;
-    cursor: pointer; }
-
-.bounce {
-  -moz-animation: bounce 5s infinite;
-  -webkit-animation: bounce 5s infinite;
-  animation: bounce 10s infinite; }
+  opacity: 100% !important;
+  margin: 8% 0;
+}
+.container-home-first .home-first .circle .arrow .fa {
+  text-decoration: none !important;
+  color: #3fa6e6;
+  cursor: pointer;
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0); }
+    transform: translateY(0);
+  }
   40% {
-    transform: translateY(-30px); }
+    transform: translateY(-10px);
+  }
   60% {
-    transform: translateY(-15px); } }
+    transform: translateY(-5px);
+  }
+}
+#about-container {
+  color: #333;
+  line-height: 1.8;
+  min-height: calc(100vh - 140px);
+  padding: 30px 5em 0;
+  font-family: "Merriweather", serif;
+  font-size: 100%;
+  margin-top: 3em;
+}
+#about-container .about-me .description {
+  font-size: 1em;
+  text-align: justify;
+  font-weight: 400;
+  color: #333;
+}
+#about-container .about-me .title {
+  color: #0077b6;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: -1px;
+  word-spacing: 5px;
+  text-align: center;
+}
 
-@media (min-width: 1800px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 160px; } }
+.notes-contacts-row {
+  padding: 0 1em 0 1em;
+}
 
-@media (min-width: 1500px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1340px; } }
+@media screen and (min-width: 1800px) {
+  #about-container {
+    font-size: 80%;
+    margin-top: 1em;
+    padding: 30px 2em 0;
+    min-height: calc(100vh - 100px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  #about-container {
+    padding: 5px 1em 0;
+  }
+}
+.dev-notes {
+  font-size: 1em;
+  text-align: left;
+  font-family: "Merriweather", serif;
+}
+.dev-notes .title {
+  margin-top: 2em;
+  color: #0077b6;
+  font-weight: 700;
+  font-size: 0.5px;
+  letter-spacing: -1px;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+.dev-notes a {
+  color: #3fa6e6;
+}
+
+@media screen and (max-width: 1000px) {
+  .dev-notes .title {
+    margin-top: 1em;
+  }
+}
+.contacts {
+  text-align: center;
+}
+.contacts .title {
+  margin-top: 2em;
+  font-family: "Merriweather", serif;
+  text-align: left;
+  color: #0077b6;
+  font-weight: 700;
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  word-spacing: 5px;
+  padding-bottom: 5px;
+}
+
+.contactList li {
+  text-align: center;
+  padding: 5px;
+}
+.contactList li a,
+.contactList li .footer a {
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .contacts .title {
+    margin-top: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+
+.dev-notes {
+  font-size: 1em;
+  text-align: left;
+  font-family: 'Merriweather', serif;
+
+  .title {
+    margin-top: 2em;
+    color: #0077b6;
+    font-weight: 700;
+    font-size: 0.5px;
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+  }
+
+  a {
+    color: $blue-main;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .dev-notes .title {
+    margin-top: 1em;
+  }
+}

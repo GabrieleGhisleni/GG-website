@@ -1,61 +1,44 @@
-import { Container, Col, Row } from "reactstrap";
-import { useEffect, useState } from "react";
-import Typist from 'react-typist';
+import {Container, Col, Row} from "reactstrap";
+import {useEffect, useState} from "react";
+
+import {calculateAndSetNavHeight, scrollDownByNavHeight, scrollToTopSmoothly} from "./utils/scrollingTop";
+import TypeAnimationComponent from "./utils/typeAnimation";
 
 const HomeHeader = () => {
-  // var img = 'assets/images/2_1.jpg'
-  var img = process.env.PUBLIC_URL + '/assets/images/2_1.jpg';
-  var Scroll = require('react-scroll');
-  var scroll = Scroll.animateScroll;
-  const [navH, setnavH] = useState(0);
+    const [navHeight, setNavHeight] = useState(0);
 
-  useEffect(() => {
-    scroll.scrollToTop({ smooth: true });
-    const elementHeight = document.getElementById('main').clientHeight;
-    const androidBar = elementHeight - window.innerHeight;
-    var nav = document.getElementById('mainNav');
-    var navH = Number(getComputedStyle(nav).height.slice(0, -2)) + 8;
-    setnavH(navH - androidBar);
-  })
+    useEffect(() => {
+        scrollToTopSmoothly();
+        calculateAndSetNavHeight(setNavHeight);
+    }, [navHeight]);
 
-  var typeAnim = [];
-  for (let i = 0; i < 100; i++) {
-    typeAnim.push(
-      <span key={i}>
-        <Typist.Backspace count={17} delay={3000} />
-        <span> Machine Learning Engineer </span>
-        <Typist.Backspace count={27} delay={3000} />
-        <span> Web Developer </span>
-        <Typist.Backspace count={17} delay={3000} />
-        <span> Data Scientist </span>
-      </span>
-    );};
-  
 
-  return (
-    <Row id='main' className="firstPage backImg" style={{ backgroundImage: `url(${img})` }}>
-      <Container className="align-self-center">
-        <Row className="text-center">
-          <Col><h1 className="name">Gabriele Ghisleni</h1></Col>
-        </Row>
-        <Row className='text-center'>
-          <Col>
-            <Typist className='animation' avgTypingDelay={100}>
-              <span> Data Scientist </span>
-              {typeAnim}  
-            </Typist>
-          </Col>
-        </Row>
-        <Row style={{ marginTop: "100px" }}>
-          <Col>
-            <div className="arrow bounce">
-              <span className="fa fa-arrow-down fa-2x" onClick={() => scroll.scrollMore((window.innerHeight - navH))}></span>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </Row>
-  );
+    return (
+        <Container
+            fluid
+            className="container-home-first"
+            style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/images/upscaled_background.webp'})`}}
+        >
+            <Row className="text-center justify-content-center home-first">
+                <Col xs='12'>
+                    <h1 className="home-main-name">Gabriele Ghisleni</h1>
+                </Col>
+                <Col xs='12'>
+                    <TypeAnimationComponent/>
+                </Col>
+                <Col xs="auto">
+                    <div className="circle">
+                        <div className="arrow bounce">
+                                <span
+                                    className="fa fa-arrow-down fa-2x"
+                                    onClick={() => scrollDownByNavHeight(navHeight)}>
+                                </span>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    );
 };
 
 export default HomeHeader;

@@ -1,22 +1,18 @@
 import './css/style.css';
-import {BrowserRouter, HashRouter} from 'react-router-dom'
 
-import {Component} from 'react';
-import Main from './components/Main';
+import React from 'react';
 
-class App extends Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return(
-      <div>
-        <HashRouter>
-          <Main />
-        </HashRouter>
-      </div>
-    )
-  }
+import {Footer} from './components/layout/Footer';
+import Home from "./components/Home";
+
+const App = () => {
+    return (
+        <React.Fragment>
+            <Home/>
+            <Footer/>
+        </React.Fragment>
+    );
 }
+
 
 export default App;

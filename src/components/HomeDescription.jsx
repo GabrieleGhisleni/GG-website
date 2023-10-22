@@ -1,50 +1,42 @@
-import { Row, Container, Col } from "reactstrap";
-import { NavLink } from 'react-router-dom';
+import {Row, Container, Col} from "reactstrap";
+import DevNotes from "./HomeDevNotes";
 import HomeContacts from "./HomeContacts";
 
 const HomeDescription = () => {
-    const projectName = "See the projects"
     return (
-        <Container id='homeDescription'>
-            <Row className='rowAbout text-center'>
-                <Col xs='12' md='8'>
-                    <h4 className='title'>About Me<hr /></h4>
-                    <div className='homeP'>
-                    Hi! My Name is Gabriele Ghisleni and i'm a Data Scientist student at
-                    the University of Trento. I work mainly in Python for all tasks in
-                    the data science world such as EDA, machine learning, data
-                    engineering, data visualization and others. <br/> <br/> 
+        <Container id='about-container'>
+            <Row className='about-me text-center'>
+                <Col xs='12'>
+                    <h4 className='title'>
+                        About Me
+                        <hr/>
+                    </h4>
+                    <div className='description'>
+                        <p>
 
-                    I've learned the MLOPS best practise and standards along with many big data tools such as
-                    Docker, Pub/Sub system as MQTT, a bit of DBMS (MySQL and Redis) and
-                    how to create robust tests. <br/> <br/> 
-                    
-                    Besides data science I have learned
-                    different tools for web development such as HTML, CSS, JavaScript
-                    and a professional framework such React.js, I've deployed small web
-                    applications. Together with them I've also a basic and general
-                    knowledge on backend development using Python frameworks such as
-                    Django, Django Rest API.
+                        I am a versatile and dynamic professional with a fervor for technology and a robust background
+                        in data science and critical thinking. My educational journey includes a Bachelor's degree in
+                        Philosophy and a Master's degree in Data Science. <br/><br/>
+
+                        My career commenced as a software developer, where I honed my skills in React and Django,
+                        enabling me to craft high-quality code. Currently, I am immersed in the role of a data
+                        scientist, harnessing my technical prowess and
+                        analytical thinking to address intricate challenges in the realm of NLP.<br/><br/>
+
+                        In my spare time, I absolutely love playing table tennis 🏓 and going for hikes ⛰️. But that's not all
+                        – I'm also quite the adventurer, enjoying rock climbing 🧗🏼, and I've got some smooth salsa 💃🏼 dance
+                        moves too!
+                        </p>
                     </div>
-                        {/* <button className="button-home btn-lg form-control ">
-                            <NavLink to='/projects' id="project-button">{projectName}</NavLink>
-                        </button> */}
-                    {
-                        window.innerWidth < 768?
-                        <button className="button-home btn-lg ">
-                            <NavLink to='/projects' id="project-button">{projectName}</NavLink>
-                        </button>: null
-                    }
                 </Col>
-                <Col xs='12' md='4'>
-                    <HomeContacts />
-                    {
-                        window.innerWidth > 768?
-                        <button className="button-home btn-lg ">
-                            <NavLink to='/projects' id="project-button">{projectName}</NavLink>
-                        </button>: null
-                    }
-                </Col>
+                <Row className='notes-contacts-row'>
+                    <Col xs='12' sm='8'>
+                        <DevNotes/>
+                    </Col>
+                    <Col xs='12' sm='4'>
+                        <HomeContacts/>
+                    </Col>
+                </Row>
             </Row>
         </Container>
     );

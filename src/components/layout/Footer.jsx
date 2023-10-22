@@ -1,14 +1,14 @@
-import { List, ListInlineItem } from "reactstrap";
+import {Col, Container, List, ListInlineItem, Row} from "reactstrap";
 
 export const Footer = () => {
     return (
         <div className="footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
+            <Container >
+                <Row >
+                    <Col>
                         <span>@2021 Ghisleni Gabriele</span>
-                    </div>
-                    <div className="col" style={{ textAlign: "right" }}>
+                    </Col>
+                    <Col className="col" style={{ textAlign: "right" }}>
                         <List type="inline">
                             <ListInlineItem>
                                 <a href="https://github.com/GabrieleGhisleni">
@@ -41,9 +41,9 @@ export const Footer = () => {
                                 </a>
                             </ListInlineItem>
                         </List>
-                    </div>
-                </div>
-            </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };
