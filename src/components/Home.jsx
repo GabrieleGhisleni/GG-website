@@ -5,10 +5,10 @@ import HomeDescription from "./HomeDescription";
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <div>
       <HomeHeader />
       <HomeDescription />
-    </React.Fragment>
+    </div>
   );
 }
 
