@@ -11,11 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-
+    <link
+        rel="preload"
+        as="image"
+        href="%PUBLIC_URL%/assets/images/upscaled_background.webp"
+    />
     <link rel="manifest" crossorigin="use-credentials" href="%PUBLIC_URL%/manifest.json"/>
     <title>GG Website</title>
   </head>
   <body>
+  <div style="display: none;">
+    <img src="%PUBLIC_URL%/assets/images/upscaled_background.webp" alt="" />
+  </div>
     <noscript></noscript>
     <div id="root"></div>
   </body>
