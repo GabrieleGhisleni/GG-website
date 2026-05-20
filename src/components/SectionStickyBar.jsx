@@ -21,6 +21,15 @@ const SectionStickyBar = () => {
         if (intersecting[0]) {
           const slug = intersecting[0].target.id.replace(/^section-/, '');
           setCurrent(titleBySlug[slug]);
+        } else {
+          // All section headings scrolled above viewport — show topmost visible
+          const above = entries
+            .filter(e => e.boundingClientRect.top < 0)
+            .sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top);
+          if (above[0]) {
+            const slug = above[0].target.id.replace(/^section-/, '');
+            setCurrent(titleBySlug[slug]);
+          }
         }
       },
       { rootMargin: '-20% 0px -70% 0px', threshold: 0 }

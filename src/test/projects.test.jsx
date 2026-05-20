@@ -1,15 +1,21 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect, beforeAll } from 'vitest';
+import { render, screen, act } from '@testing-library/react';
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 import Projects from '../components/Projects';
 import { PROJECT_SECTIONS } from '../data/projects';
 
+let capturedCallback;
+
 beforeAll(() => {
-  class IO {
+  globalThis.IntersectionObserver = class {
+    constructor(cb) { capturedCallback = cb; }
     observe() {}
     unobserve() {}
     disconnect() {}
-  }
-  globalThis.IntersectionObserver = IO;
+  };
+});
+
+afterAll(() => {
+  delete globalThis.IntersectionObserver;
 });
 
 describe('Projects', () => {
@@ -27,5 +33,23 @@ describe('Projects', () => {
     for (const p of allProjects) {
       expect(screen.getByText(p.name)).toBeInTheDocument();
     }
+  });
+
+  it('sticky bar updates when IntersectionObserver fires', () => {
+    render(<Projects />);
+    const secondSection = PROJECT_SECTIONS[1];
+    const headingEl = document.getElementById(`section-${secondSection.slug}`);
+    expect(headingEl).not.toBeNull();
+
+    act(() => {
+      capturedCallback([{
+        isIntersecting: true,
+        target: headingEl,
+        boundingClientRect: { top: 100 },
+      }]);
+    });
+
+    // The sticky bar should now show the second section's title
+    expect(screen.getAllByText(secondSection.title).length).toBeGreaterThan(0);
   });
 });
