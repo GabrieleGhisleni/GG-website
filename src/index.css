@@ -1,6 +1,6 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&family=Raleway:wght@400;700;800&display=swap");
+
+@import "tailwindcss";
 
 @theme {
   --color-brand: #3fa6e6;
