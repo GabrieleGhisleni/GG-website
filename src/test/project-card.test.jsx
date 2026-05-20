@@ -55,4 +55,22 @@ describe('ProjectCard', () => {
     const { container } = render(<ProjectCard project={sampleFlagship} />);
     expect(container.querySelector('#project-sample')).not.toBeNull();
   });
+
+  it('renders solution with inline link when project.links provided', () => {
+    const projectWithLink = {
+      ...sampleFlagship,
+      solution: 'A solution with LangChain docs reference.',
+      links: [{ label: 'LangChain docs', url: 'https://example.com/langchain' }],
+    };
+    render(<ProjectCard project={projectWithLink} />);
+    const link = screen.getByRole('link', { name: 'LangChain docs' });
+    expect(link).toHaveAttribute('href', 'https://example.com/langchain');
+    expect(link).toHaveAttribute('target', '_blank');
+  });
+
+  it('shows no +N indicator when stack has exactly 4 items', () => {
+    const project4 = { ...sampleFlagship, stack: ['A', 'B', 'C', 'D'] };
+    render(<ProjectCard project={project4} />);
+    expect(screen.queryByText(/^\+\d/)).toBeNull();
+  });
 });

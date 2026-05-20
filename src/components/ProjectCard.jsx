@@ -10,12 +10,12 @@ const renderSolutionWithLinks = (solution, links) => {
   if (!links || links.length === 0) return solution;
   const parts = [];
   let cursor = solution;
-  for (const { label, url } of links) {
+  for (const [i, { label, url }] of links.entries()) {
     const idx = cursor.indexOf(label);
     if (idx === -1) continue;
     parts.push(cursor.slice(0, idx));
     parts.push(
-      <a key={url} href={url} target="_blank" rel="noreferrer" className="text-brand hover:underline">
+      <a key={`${label}-${i}`} href={url} target="_blank" rel="noreferrer" className="text-brand hover:underline">
         {label}
       </a>
     );
@@ -26,7 +26,7 @@ const renderSolutionWithLinks = (solution, links) => {
 };
 
 const ProjectCard = ({ project }) => {
-  const { slug, name, flagship, role, start, end, summary, problem, solution, stack, links } = project;
+  const { slug, name, flagship, role, start, end = 'ongoing', summary, problem, solution, stack = [], links } = project;
   const visibleStack = stack.slice(0, 4);
   const hiddenStackCount = stack.length - visibleStack.length;
   const variant = flagship ? 'flagship' : 'non-flagship';
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }) => {
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-2">
-              {flagship && <Star className="h-4 w-4 flex-none translate-y-0.5 fill-brand text-brand" aria-label="flagship" />}
+              {flagship && <Star className="h-4 w-4 flex-none translate-y-0.5 fill-brand text-brand" aria-hidden="true" />}
               <h3 className={flagship ? 'text-xl font-semibold text-ink' : 'text-base font-medium text-ink'}>
                 {name}
               </h3>
