@@ -1,5 +1,4 @@
 {
-  "homepage": "http://GabrieleGhisleni.github.io/GG-website/",
   "name": "ggweb",
   "version": "0.2.0",
   "private": true,
@@ -26,9 +25,5 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-  },
-  "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
