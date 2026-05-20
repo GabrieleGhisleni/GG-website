@@ -7,11 +7,11 @@
     "bootstrap": "^4.6.0",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
+    "lucide-react": "^1.16.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scroll": "^1.9.3",
     "react-type-animation": "^3.2.0",
-    "react-typist": "^2.0.5",
     "reactstrap": "^8.10.0"
   },
   "devDependencies": {

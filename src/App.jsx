@@ -1,10 +1,9 @@
-import React from 'react';
+import Hero from './components/Hero';
 import { Footer } from './components/layout/Footer';
-import Home from './components/Home';
 
 const App = () => (
   <>
-    <Home />
+    <Hero />
     <Footer />
   </>
 );
