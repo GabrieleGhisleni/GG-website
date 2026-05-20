@@ -15,7 +15,12 @@ const sampleFlagship = {
   stack: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Elasticsearch', 'Langfuse'],
 };
 
-const sampleNonFlagship = { ...sampleFlagship, slug: 'sample-2', name: 'Sample Non Flagship', flagship: false };
+const sampleNonFlagship = {
+  ...sampleFlagship,
+  slug: 'sample-2',
+  name: 'Sample Non Flagship',
+  flagship: false,
+};
 
 describe('ProjectCard', () => {
   it('renders name, role, date and summary', () => {

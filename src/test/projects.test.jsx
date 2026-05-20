@@ -7,7 +7,9 @@ let capturedCallback;
 
 beforeAll(() => {
   globalThis.IntersectionObserver = class {
-    constructor(cb) { capturedCallback = cb; }
+    constructor(cb) {
+      capturedCallback = cb;
+    }
     observe() {}
     unobserve() {}
     disconnect() {}
@@ -29,7 +31,7 @@ describe('Projects', () => {
 
   it('renders every project name', () => {
     render(<Projects />);
-    const allProjects = PROJECT_SECTIONS.flatMap(s => s.projects);
+    const allProjects = PROJECT_SECTIONS.flatMap((s) => s.projects);
     for (const p of allProjects) {
       expect(screen.getByText(p.name)).toBeInTheDocument();
     }
@@ -42,11 +44,13 @@ describe('Projects', () => {
     expect(headingEl).not.toBeNull();
 
     act(() => {
-      capturedCallback([{
-        isIntersecting: true,
-        target: headingEl,
-        boundingClientRect: { top: 100 },
-      }]);
+      capturedCallback([
+        {
+          isIntersecting: true,
+          target: headingEl,
+          boundingClientRect: { top: 100 },
+        },
+      ]);
     });
 
     // The sticky bar should now show the second section's title
