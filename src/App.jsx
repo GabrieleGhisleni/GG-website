@@ -1,9 +1,11 @@
 import Hero from './components/Hero';
-import { Footer } from './components/layout/Footer';
+import About from './components/About';
+import Footer from './components/Footer';
 
 const App = () => (
   <>
     <Hero />
+    <About />
     <Footer />
   </>
 );
