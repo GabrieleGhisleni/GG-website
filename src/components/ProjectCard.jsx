@@ -15,9 +15,15 @@ const renderSolutionWithLinks = (solution, links) => {
     if (idx === -1) continue;
     parts.push(cursor.slice(0, idx));
     parts.push(
-      <a key={`${label}-${i}`} href={url} target="_blank" rel="noreferrer" className="text-brand hover:underline">
+      <a
+        key={`${label}-${i}`}
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        className="text-brand hover:underline"
+      >
         {label}
-      </a>
+      </a>,
     );
     cursor = cursor.slice(idx + label.length);
   }
@@ -26,7 +32,19 @@ const renderSolutionWithLinks = (solution, links) => {
 };
 
 const ProjectCard = ({ project }) => {
-  const { slug, name, flagship, role, start, end = 'ongoing', summary, problem, solution, stack = [], links } = project;
+  const {
+    slug,
+    name,
+    flagship,
+    role,
+    start,
+    end = 'ongoing',
+    summary,
+    problem,
+    solution,
+    stack = [],
+    links,
+  } = project;
   const visibleStack = stack.slice(0, 4);
   const hiddenStackCount = stack.length - visibleStack.length;
   const variant = flagship ? 'flagship' : 'non-flagship';
@@ -43,8 +61,17 @@ const ProjectCard = ({ project }) => {
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-2">
-              {flagship && <Star className="h-4 w-4 flex-none translate-y-0.5 fill-brand text-brand" aria-hidden="true" />}
-              <h3 className={flagship ? 'text-xl font-semibold text-ink' : 'text-base font-medium text-ink'}>
+              {flagship && (
+                <Star
+                  className="h-4 w-4 flex-none translate-y-0.5 fill-brand text-brand"
+                  aria-hidden="true"
+                />
+              )}
+              <h3
+                className={
+                  flagship ? 'text-xl font-semibold text-ink' : 'text-base font-medium text-ink'
+                }
+              >
                 {name}
               </h3>
               <span className="text-sm text-stone-500">·</span>
@@ -56,7 +83,9 @@ const ProjectCard = ({ project }) => {
             </div>
             <p className="mt-2 text-sm text-stone-700">{summary}</p>
             <div className="mt-3 flex flex-wrap gap-1.5">
-              {visibleStack.map(s => <StackChip key={s}>{s}</StackChip>)}
+              {visibleStack.map((s) => (
+                <StackChip key={s}>{s}</StackChip>
+              ))}
               {hiddenStackCount > 0 && <StackChip>+{hiddenStackCount}</StackChip>}
             </div>
           </div>
@@ -69,18 +98,26 @@ const ProjectCard = ({ project }) => {
 
       <div className="mt-5 border-t border-stone-100 pt-5 text-sm leading-relaxed text-stone-700">
         <div className="mb-4">
-          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-stone-500">Problem</div>
+          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-stone-500">
+            Problem
+          </div>
           <p>{problem}</p>
         </div>
         <div className="mb-4">
-          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-stone-500">Solution</div>
+          <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-stone-500">
+            Solution
+          </div>
           <p>{renderSolutionWithLinks(solution, links)}</p>
         </div>
         {hiddenStackCount > 0 && (
           <div>
-            <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-stone-500">More stack</div>
+            <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-stone-500">
+              More stack
+            </div>
             <div className="flex flex-wrap gap-1.5">
-              {stack.slice(4).map(s => <StackChip key={s}>{s}</StackChip>)}
+              {stack.slice(4).map((s) => (
+                <StackChip key={s}>{s}</StackChip>
+              ))}
             </div>
           </div>
         )}

@@ -13,7 +13,9 @@ const ProjectSection = ({ section }) => (
       <span className="h-px flex-1 bg-stone-200" aria-hidden="true" />
     </h3>
     <div className="space-y-4">
-      {section.projects.map(p => <ProjectCard key={p.slug} project={p} />)}
+      {section.projects.map((p) => (
+        <ProjectCard key={p.slug} project={p} />
+      ))}
     </div>
   </section>
 );
