@@ -21,7 +21,7 @@ const SocialLinks = ({ variant = 'inline' }) => (
         <a
           href={href}
           aria-label={label}
-          {...(href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
+          {...(href.startsWith('http') || href.endsWith('.pdf') ? { target: '_blank', rel: 'noreferrer' } : {})}
           className="inline-flex items-center gap-1.5 text-current hover:text-brand transition-colors"
         >
           <Icon className="h-4 w-4" aria-hidden="true" />
