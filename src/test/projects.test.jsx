@@ -22,7 +22,7 @@ describe('Projects', () => {
   it('renders every section heading with its count', () => {
     render(<Projects />);
     for (const s of PROJECT_SECTIONS) {
-      const node = screen.getByText(new RegExp(`${s.title}.*\\(${s.projects.length}\\)`));
+      const node = screen.getByText(new RegExp(`^${s.title}.*\\(${s.projects.length}\\)`));
       expect(node).toBeInTheDocument();
     }
   });

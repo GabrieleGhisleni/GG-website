@@ -8,8 +8,8 @@ describe('PROJECT_SECTIONS', () => {
     expect(PROJECT_SECTIONS).toHaveLength(8);
   });
 
-  it('has 23 projects total', () => {
-    expect(allProjects).toHaveLength(23);
+  it('has 20 projects total', () => {
+    expect(allProjects).toHaveLength(20);
   });
 
   it('has 11 flagship projects', () => {

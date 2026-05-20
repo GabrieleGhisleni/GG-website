@@ -1,38 +1,43 @@
 import SocialLinks from './SocialLinks';
-import { SOCIALS } from '../data/socials';
 
 const About = () => (
-  <section id="about" className="mx-auto max-w-3xl px-6 py-24 font-body text-ink">
-    <h2 className="mb-8 text-center text-3xl font-extrabold text-brand-deep">About me</h2>
+  <section id="about" className="flex min-h-screen items-center bg-white px-6 py-24">
+    <div className="mx-auto max-w-3xl text-ink">
+      <h2 className="mb-8 text-3xl font-extrabold text-brand-deep">About me</h2>
 
-    <div className="space-y-5 text-lg leading-relaxed">
-      <p>
-        I started with a Bachelor's in Philosophy and a Master's in Data Science.
-        Since then I've moved deep into AI and data engineering — designing and
-        shipping production LLM agents, retrieval pipelines, and document-intelligence
-        systems.
-      </p>
-      <p>
-        Currently at SpazioDati, I architect and build the AI products powering
-        company-intelligence, credit, and procurement use cases — from a
-        centralized agent hub (<a href="#project-ai-wunderkammer" className="text-brand hover:underline">AI Wunderkammer</a>)
-        to a graph-based catalog-search agent (<a href="#project-sentovel" className="text-brand hover:underline">Sentovel</a>)
-        to OCR/VLM benchmarks on Italian management reports. I also co-own the team's
-        Langfuse + LiteLLM stack that fronts all our LLM traffic, and maintain{' '}
-        <a href={SOCIALS.bytebrush} target="_blank" rel="noreferrer" className="text-brand hover:underline">
-          ByteBrush
-        </a>
-        {' '}as a public record of what I'm studying.
-      </p>
-      <p>
-        Off-hours: a side project for a life coach (Stripe + capacity-limited
-        bookings), and table tennis 🏓, hiking ⛰️, climbing 🧗🏼, salsa 💃🏼 when
-        the laptop closes.
-      </p>
-    </div>
+      <div className="space-y-5 text-base leading-relaxed text-stone-700">
+        <p>
+          Philosophy undergrad, Data Science master's — then a hard turn into building things that ship.
+          I've always been more interested in the problem than the tool, which is probably why I ended
+          up at the intersection of language, data, and systems.
+        </p>
+        <p>
+          I work at SpazioDati on the AI layer powering company intelligence, credit, and procurement
+          products: production LLM agents, retrieval pipelines, an agent hub, a graph-based
+          catalog-search agent, OCR/VLM benchmarks on Italian management reports.
+          I co-own the team's Langfuse + LiteLLM stack that fronts all our LLM traffic, and keep
+          a running log of what I'm learning and building on the side.
+        </p>
+        <p>
+          Outside of work I built and maintain a full booking platform for Sofia Riggi's coaching
+          practice —{' '}
+          <a href="https://liveyourownlife.it" target="_blank" rel="noreferrer" className="text-brand hover:underline">
+            LiveYourOwnLife
+          </a>
+          {' '}— handling scheduling, Stripe payments, and capacity-limited sessions end to end.
+        </p>
+      </div>
 
-    <div className="mt-10 flex justify-center">
-      <SocialLinks variant="inline" />
+      <div className="mt-10 space-y-2">
+        <p className="text-xs font-semibold uppercase tracking-widest text-stone-400">When the laptop closes</p>
+        <p className="text-base text-stone-600">
+          Table tennis 🏓 &nbsp;·&nbsp; Hiking ⛰️ &nbsp;·&nbsp; Climbing 🧗🏼 &nbsp;·&nbsp; Salsa 💃🏼
+        </p>
+      </div>
+
+      <div className="mt-10">
+        <SocialLinks variant="inline" />
+      </div>
     </div>
   </section>
 );
