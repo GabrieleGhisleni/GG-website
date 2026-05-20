@@ -15,7 +15,7 @@ beforeAll(() => {
 describe('<App/> smoke test', () => {
   it('renders the name, all sections, and all 20 projects', () => {
     render(<App />);
-    expect(screen.getByText('Gabriele Ghisleni')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Gabriele\s+Ghisleni/i })).toBeInTheDocument();
 
     for (const s of PROJECT_SECTIONS) {
       expect(
