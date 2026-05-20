@@ -5,7 +5,7 @@
  * @property {boolean} flagship
  * @property {string} role
  * @property {string} start
- * @property {string} end
+ * @property {string} end - "Mon YYYY" or "ongoing" for active projects.
  * @property {string} summary
  * @property {string} problem
  * @property {string} solution
@@ -70,7 +70,7 @@ export const PROJECT_SECTIONS = freeze([
         start: 'Mar 2025',
         end: 'Apr 2026',
         summary: "AI personas (Howard Marks, Warren Buffett, Moody's) for analyst-grade financial Q&A with RAG and live portfolio data access.",
-        problem: "A collection of agents impersonating well-known economists and credit analysts (Howard Marks, Warren Buffett, Moody's, etc.) for analyst-grade financial and company-intelligence Q&A. The same agents are surfaced through AI Wunderkammer and reused across other internal products.",
+        problem: "Analysts needed expert AI personas — well-known economists and credit analysts like Howard Marks, Warren Buffett, and Moody's researchers — for financial and company-intelligence Q&A, but no tooling existed to give them stylistically consistent, sourced answers grounded in each expert's actual body of work and in the firm's proprietary data.",
         solution: "Each persona has its full body of writings indexed and runs RAG over its own corpus, web search when needed, and citations that link every claim back to the source paragraph. A text-to-SQL sub-agent exposed as a tool gives the personas live access to customer portfolio data, so a question like \"how is my portfolio exposed to X?\" is answered against the real positions rather than generic advice.",
         stack: ['Python', 'FastAPI', 'LangGraph', 'OpenAI', 'PostgreSQL', 'Elasticsearch', 'Langfuse'],
       },

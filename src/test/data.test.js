@@ -22,6 +22,9 @@ describe('PROJECT_SECTIONS', () => {
       for (const field of required) {
         expect(p, `field "${field}" on project "${p.name ?? p.slug}"`).toHaveProperty(field);
       }
+      for (const strField of ['slug', 'name', 'role', 'start', 'end', 'summary']) {
+        expect(p[strField].length, `"${strField}" on "${p.name}" is empty`).toBeGreaterThan(0);
+      }
       expect(p.stack.length, `stack on "${p.name}" is empty`).toBeGreaterThan(0);
       expect(p.problem.length, `problem on "${p.name}" is empty`).toBeGreaterThan(0);
       expect(p.solution.length, `solution on "${p.name}" is empty`).toBeGreaterThan(0);
@@ -40,5 +43,8 @@ describe('PROJECT_SECTIONS', () => {
 
   it('object is deeply frozen', () => {
     expect(Object.isFrozen(PROJECT_SECTIONS)).toBe(true);
+    expect(Object.isFrozen(PROJECT_SECTIONS[0])).toBe(true);
+    expect(Object.isFrozen(PROJECT_SECTIONS[0].projects[0])).toBe(true);
+    expect(Object.isFrozen(PROJECT_SECTIONS[0].projects[0].stack)).toBe(true);
   });
 });
