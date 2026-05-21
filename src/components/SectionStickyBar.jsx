@@ -22,7 +22,7 @@ const SectionStickyBar = () => {
           const slug = intersecting[0].target.id.replace(/^section-/, '');
           setCurrent(titleBySlug[slug]);
         } else {
-          // All section headings scrolled above viewport — show topmost visible
+          // All section headings scrolled above viewport - show topmost visible
           const above = entries
             .filter((e) => e.boundingClientRect.top < 0)
             .toSorted((a, b) => b.boundingClientRect.top - a.boundingClientRect.top);

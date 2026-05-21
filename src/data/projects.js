@@ -56,9 +56,9 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A centralized hub where users browse and interact with every agent and MCP the team has developed, with persistent history, file upload, RBAC, and artifact management.',
         problem:
-          "The team had built dozens of specialized AI agents and MCP servers across company intelligence, credit ratings (Fitch/Moody's/S&P), value investing, Italian economic data, procurement, and document analysis — but they were scattered across separate repos, demos, and environments, with no single place to discover or use them, and no shared layer for managing the artifacts they produced.",
+          "The team had built dozens of specialized AI agents and MCP servers across company intelligence, credit ratings (Fitch/Moody's/S&P), value investing, Italian economic data, procurement, and document analysis - but they were scattered across separate repos, demos, and environments, with no single place to discover or use them, and no shared layer for managing the artifacts they produced.",
         solution:
-          'A centralized hub where users browse and interact with every agent and MCP the team has developed, both production and R&D. Supports persistent conversation history, file upload, in-context memory shared across agents, RBAC, an admin panel to register agents without code deploys, and artifact management (create, edit, share) exposed via both UI and API. Architecturally combines Vercel AI SDK streaming primitives with LangGraph orchestration — keeping fast token streaming on the frontend while running multi-step graph logic on the backend.',
+          'A centralized hub where users browse and interact with every agent and MCP the team has developed, both production and R&D. Supports persistent conversation history, file upload, in-context memory shared across agents, RBAC, an admin panel to register agents without code deploys, and artifact management (create, edit, share) exposed via both UI and API. Architecturally combines Vercel AI SDK streaming primitives with LangGraph orchestration - keeping fast token streaming on the frontend while running multi-step graph logic on the backend.',
         stack: [
           'Next.js 15',
           'TypeScript',
@@ -82,7 +82,7 @@ export const PROJECT_SECTIONS = freeze([
         problem:
           'Data analysts, marketing teams, and LLM-powered tools had no way to discover or query the internal catalog of ~800 tables, glossary entries, and data products. Finding the right dataset required knowing its name; getting answers meant writing SQL by hand.',
         solution:
-          'A graph-based AI agent that searches the full OpenMetadata catalog (ingested into Elasticsearch with LLM-enriched descriptions and semantic embeddings), performs multi-hop retrieval to find relevant tables, then generates and runs SQL for grounded answers. Also answers questions over the catalog metadata itself (lineage, ownership, definitions). Surfaced through the central agent hub at ~30 queries/day — the de-facto entrypoint for data questions internally, and a key tool during the ION merger to navigate the combined data estate.',
+          'A graph-based AI agent that searches the full OpenMetadata catalog (ingested into Elasticsearch with LLM-enriched descriptions and semantic embeddings), performs multi-hop retrieval to find relevant tables, then generates and runs SQL for grounded answers. Also answers questions over the catalog metadata itself (lineage, ownership, definitions). Surfaced through the central agent hub at ~30 queries/day - the de-facto entrypoint for data questions internally, and a key tool during the ION merger to navigate the combined data estate.',
         stack: [
           'Python 3.13',
           'LangGraph',
@@ -127,7 +127,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A multi-agent backend with 9 execution paths routing queries across all company-intelligence products via an LLM orchestrator with real-time WebSocket streaming.',
         problem:
-          'An R&D effort to build a single "superagent" sitting on top of all company-intelligence products — one orchestrator agent that could answer any market or company question by delegating to the right tools and sub-agents, removing the need for analysts to learn each product\'s API or UI.',
+          'An R&D effort to build a single "superagent" sitting on top of all company-intelligence products - one orchestrator agent that could answer any market or company question by delegating to the right tools and sub-agents, removing the need for analysts to learn each product\'s API or UI.',
         solution:
           'A multi-agent backend (fork of Perplexica) with 9 specialized execution paths routed by an LLM orchestrator. Integrates four proprietary APIs with web search, a PostgreSQL market database, and SearxNG. Responses stream in real-time via WebSocket; conversation state persists across sessions. Designed to work with both cloud and locally-run models.',
         stack: [
@@ -158,7 +158,7 @@ export const PROJECT_SECTIONS = freeze([
         problem:
           'AI agents (Claude Desktop, custom LLM tools) needed structured access to a company-intelligence database without writing API integrations from scratch, while still respecting authentication and per-client data scope rules.',
         solution:
-          'A plug-and-play MCP server that exposes four tools covering company search, detail extraction, and aggregated analytics. Ships in two variants — extended/authenticated for internal use and open/limited for public clients — with per-request cost tracking, full observability, and an automated behavioral test suite that simulates real agent interactions to catch protocol-level regressions before release. Compatible with any AI client that speaks the Model Context Protocol.',
+          'A plug-and-play MCP server that exposes four tools covering company search, detail extraction, and aggregated analytics. Ships in two variants - extended/authenticated for internal use and open/limited for public clients - with per-request cost tracking, full observability, and an automated behavioral test suite that simulates real agent interactions to catch protocol-level regressions before release. Compatible with any AI client that speaks the Model Context Protocol.',
         stack: ['Python 3.13', 'FastMCP', 'httpx', 'OpenTelemetry', 'Langfuse'],
       },
     ],
@@ -177,9 +177,9 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A production REST API classifying text across all 17 UN SDGs with explainability outputs, running at ~100k classifications/year for four years.',
         problem:
-          'Organizations needed to automatically tag documents, reports, and company descriptions against the 17 UN Sustainable Development Goals — a task previously requiring manual review by policy experts and prohibitively expensive at corporate-database scale.',
+          'Organizations needed to automatically tag documents, reports, and company descriptions against the 17 UN Sustainable Development Goals - a task previously requiring manual review by policy experts and prohibitively expensive at corporate-database scale.',
         solution:
-          "Originally built as a master's thesis project (encoder-only XLM-RoBERTa with a multilingual classification head), now a production REST API and React demo UI that classifies arbitrary text across all 17 SDGs with explainability outputs (keywords, sub-target alignment, verbatim source quotes). Running in production for four years at ~100k classifications per year, and consumed internally as a microservice by other enrichment pipelines — most notably the country-wide SDG tagging pipeline for sustainability reports.",
+          "Originally built as a master's thesis project (encoder-only XLM-RoBERTa with a multilingual classification head), now a production REST API and React demo UI that classifies arbitrary text across all 17 SDGs with explainability outputs (keywords, sub-target alignment, verbatim source quotes). Running in production for four years at ~100k classifications per year, and consumed internally as a microservice by other enrichment pipelines - most notably the country-wide SDG tagging pipeline for sustainability reports.",
         stack: [
           'Python',
           'FastAPI',
@@ -199,7 +199,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A frozen LLaMA-2-7B used as a feature extractor with a linear classification head for full-document SDG classification without truncation.',
         problem:
-          'Standard transformer classifiers truncate long documents, losing the context most relevant to multi-label tasks like SDG classification — where the signal can sit anywhere across a 50-page sustainability report.',
+          'Standard transformer classifiers truncate long documents, losing the context most relevant to multi-label tasks like SDG classification - where the signal can sit anywhere across a 50-page sustainability report.',
         solution:
           'Started as a solo research exploration: a frozen LLaMA-2-7B used as a feature extractor with a lightweight linear classification head on top, letting full-length documents flow through the model without chunking or truncation. The architecture moved from notebook into production and now serves as the long-document classification layer consumed by the country-wide SDG tagging pipeline and other downstream pipelines.',
         stack: ['Python 3.10', 'PyTorch', 'Hugging Face Transformers', 'Weights & Biases'],
@@ -250,7 +250,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A production API exposing a reusable async Python library for streaming RAG Q&A over sector-analysis reports with bilingual citation extraction and Redis-cached retrieval.',
         problem:
-          'Analysts querying Italian industry-sector research reports needed natural-language Q&A with grounded answers, table extraction, and source citations — without every consuming service rebuilding the retrieval stack from scratch.',
+          'Analysts querying Italian industry-sector research reports needed natural-language Q&A with grounded answers, table extraction, and source citations - without every consuming service rebuilding the retrieval stack from scratch.',
         solution:
           'Deployed as a production API that exposes a reusable async Python library. Provides streaming RAG Q&A over sector-analysis reports with bilingual (IT/EN) citation extraction and Redis-cached retrieval.',
         stack: ['Python 3.12', 'LangChain', 'OpenAI', 'Elasticsearch', 'Redis'],
@@ -265,7 +265,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A benchmark platform for competing OCR/VLM engines on scanned Italian fund-report PDFs, with a custom quality-index evaluator, Streamlit QA UI, and key-information extraction layer.',
         problem:
-          'Italian fund management reports arrive as scanned PDFs that traditional OCR struggles with, and existing tools offered no principled way to compare candidate engines on production-representative inputs — for a pipeline that needs to handle ~80k PDFs every year.',
+          'Italian fund management reports arrive as scanned PDFs that traditional OCR struggles with, and existing tools offered no principled way to compare candidate engines on production-representative inputs - for a pipeline that needs to handle ~80k PDFs every year.',
         solution:
           "A benchmark platform that runs competing OCR and VLM-based engines (IBM Docling, DeepSeek-OCR-2, dots.mocr, LightOnOCR, FalconOCR) served locally through vLLM for GPU inference. Beyond raw accuracy, a custom quality-index evaluation scores each model's output and surfaces low-confidence pages in a Streamlit QA UI for manual review. On top of the benchmark, an extraction layer pulls key information and AI-generated summaries from the selected pipeline.",
         stack: ['Python 3.14', 'vLLM', 'Docling', 'PyMuPDF', 'rapidfuzz', 'tiktoken', 'Streamlit'],
@@ -282,7 +282,7 @@ export const PROJECT_SECTIONS = freeze([
         problem:
           "Italian public tender attachments (disciplinari di gara) bury ~20 distinct qualification requirements inside very long, unstructured PDFs. Extracting them manually for a public-procurement platform was slow, error-prone, and didn't scale to the >200k attachments published every year.",
         solution:
-          'A multi-step production LLM pipeline that reads each attachment, classifies the document type, and extracts ~20 structured fields — certifications, SOA requirements, financial guarantees, award criteria, deadlines, and more — as normalized JSON for downstream consumption. The pipeline is split into multiple stages because documents are long and field-specific prompting on chunked context outperforms single-shot extraction. Includes semantic search over the corpus so analysts can also query past tenders by content rather than metadata alone.',
+          'A multi-step production LLM pipeline that reads each attachment, classifies the document type, and extracts ~20 structured fields - certifications, SOA requirements, financial guarantees, award criteria, deadlines, and more - as normalized JSON for downstream consumption. The pipeline is split into multiple stages because documents are long and field-specific prompting on chunked context outperforms single-shot extraction. Includes semantic search over the corpus so analysts can also query past tenders by content rather than metadata alone.',
         stack: ['Python 3.12', 'LangChain', 'OpenAI', 'Elasticsearch', 'PostgreSQL', 'Langfuse'],
       },
       {
@@ -295,9 +295,9 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A diff tool for CSV datasets with exact, numerical-tolerance, and LLM semantic-equivalence strategies, available as CLI and Streamlit UI with persisted sessions.',
         problem:
-          "The public-tender extraction pipeline and similar LLM extraction pipelines produced thousands of structured records that had to be validated against a ground-truth dataset — comparing them column-by-column by hand was the only available option, and didn't scale beyond small samples.",
+          "The public-tender extraction pipeline and similar LLM extraction pipelines produced thousands of structured records that had to be validated against a ground-truth dataset - comparing them column-by-column by hand was the only available option, and didn't scale beyond small samples.",
         solution:
-          'A diff tool for CSV datasets that runs column-by-column comparisons under three configurable strategies — exact match, numerical tolerance (±10% by default), and LLM-based semantic equivalence for free-text fields — and produces per-column correctness metrics with mismatch breakdowns. Available as a CLI for batch validation runs and a Streamlit UI for interactive exploration, with persisted sessions so prior comparisons can be revisited. Used in practice to validate the public-tender extraction pipeline.',
+          'A diff tool for CSV datasets that runs column-by-column comparisons under three configurable strategies - exact match, numerical tolerance (±10% by default), and LLM-based semantic equivalence for free-text fields - and produces per-column correctness metrics with mismatch breakdowns. Available as a CLI for batch validation runs and a Streamlit UI for interactive exploration, with persisted sessions so prior comparisons can be revisited. Used in practice to validate the public-tender extraction pipeline.',
         stack: ['Python 3.13', 'pandas', 'LangChain', 'Elasticsearch', 'Streamlit', 'Click'],
       },
     ],
@@ -316,7 +316,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'An end-to-end batch pipeline discovering, ingesting, and SDG-classifying Italian corporate sustainability reports, re-run twice a year in production.',
         problem:
-          "Italian listed companies publish mandatory non-financial disclosures (DNF / sustainability reports) every year, but they're scattered across corporate websites and a sector observatory in dozens of unstandardized PDF formats — tagging them against the 17 UN SDGs required manual analyst work and didn't scale to a country-wide corporate database.",
+          "Italian listed companies publish mandatory non-financial disclosures (DNF / sustainability reports) every year, but they're scattered across corporate websites and a sector observatory in dozens of unstandardized PDF formats - tagging them against the 17 UN SDGs required manual analyst work and didn't scale to a country-wide corporate database.",
         solution:
           'An end-to-end batch pipeline, still in production and re-run twice a year, that discovers DNF PDFs via SERP API and the official observatory, ingests and chunks them, classifies their content across all 17 SDGs by calling the SDG classifier microservice, matches every report back to its company in the company-intelligence database, and publishes scored results to its custom data collections. Designed to resume from arbitrary stage failures so re-runs only pay for the missing work, and orchestrated via Azkaban for the scheduled refresh cycle.',
         stack: [
@@ -339,7 +339,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A scheduled pipeline computing a public-procurement dependence score for Italian companies, published alongside each company profile in production.',
         problem:
-          "Credit and risk teams had no quantitative way to gauge how much of an Italian company's business depends on public-sector contracts — a signal that materially affects creditworthiness but was previously left to analyst judgment.",
+          "Credit and risk teams had no quantitative way to gauge how much of an Italian company's business depends on public-sector contracts - a signal that materially affects creditworthiness but was previously left to analyst judgment.",
         solution:
           "A scheduled production pipeline that joins public procurement contract data with each company's revenue history (filling gaps via a simple LinearRegression interpolation) and computes a rilevanza_committenza_pubblica score, scoped to the subset of the ~6M companies in the company-intelligence database with measurable PA exposure. Scores are published to custom data collections and surfaced inside the product alongside the rest of the company profile.",
         stack: ['Python 3.10', 'scikit-learn', 'pandas', 'Elasticsearch', 'PostgreSQL', 'Azkaban'],
@@ -360,9 +360,9 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'Reproducible training scripts for Llama-2, Mistral, Falcon, and Gemma sweeping LoRA/DoRA and quantization configs on Italian-language datasets, tracked on Weights & Biases.',
         problem:
-          'The team needed empirical answers on which fine-tuning strategies — LoRA vs. DoRA, 4-bit vs. 8-bit quantization, SFTTrainer vs. raw Trainer, single-GPU vs. FSDP — actually pay off on Italian-language, domain-specific data, before any of it could be considered for production use.',
+          'The team needed empirical answers on which fine-tuning strategies - LoRA vs. DoRA, 4-bit vs. 8-bit quantization, SFTTrainer vs. raw Trainer, single-GPU vs. FSDP - actually pay off on Italian-language, domain-specific data, before any of it could be considered for production use.',
         solution:
-          'A reproducible research repo of training scripts and notebooks that fine-tunes Llama-2, Mistral, Falcon, and Gemma on two internal datasets (Italian cybersecurity-market Q&A and address extraction), sweeping quantization and adapter configurations and tracking every run on Weights & Biases for side-by-side comparison. Outcome stayed as internal reference material — a shared playbook the team can pull from when fine-tuning eventually moves into a real pipeline.',
+          'A reproducible research repo of training scripts and notebooks that fine-tunes Llama-2, Mistral, Falcon, and Gemma on two internal datasets (Italian cybersecurity-market Q&A and address extraction), sweeping quantization and adapter configurations and tracking every run on Weights & Biases for side-by-side comparison. Outcome stayed as internal reference material - a shared playbook the team can pull from when fine-tuning eventually moves into a real pipeline.',
         stack: [
           'Python 3.10',
           'PyTorch',
@@ -383,9 +383,9 @@ export const PROJECT_SECTIONS = freeze([
         start: 'May 2024',
         end: 'Jun 2024',
         summary:
-          'vLLM vs Hugging Face benchmarks across quantization, batch size, and speculative decoding — headline: vLLM+AWQ sustains ~875 tokens/sec vs ~192 tokens/sec for HF 8-bit.',
+          'vLLM vs Hugging Face benchmarks across quantization, batch size, and speculative decoding - headline: vLLM+AWQ sustains ~875 tokens/sec vs ~192 tokens/sec for HF 8-bit.',
         problem:
-          'Before committing the team to a serving stack for self-hosted LLMs, we needed hard numbers — not vendor benchmarks — on throughput, latency, and GPU memory across realistic configurations: batch size, quantization (AWQ vs. 8-bit vs. none), prefix caching, speculative decoding, and runtime LoRA adapter switching.',
+          'Before committing the team to a serving stack for self-hosted LLMs, we needed hard numbers - not vendor benchmarks - on throughput, latency, and GPU memory across realistic configurations: batch size, quantization (AWQ vs. 8-bit vs. none), prefix caching, speculative decoding, and runtime LoRA adapter switching.',
         solution:
           "A reproducible benchmark suite that exercises vLLM and Hugging Face Transformers under matched conditions. Headline result: vLLM with AWQ sustains ~875 tokens/sec against ~192 tokens/sec for HF 8-bit (~4.5× speedup). vLLM has since become the team's default inference engine for self-hosted models, including the GPU-served OCR/VLM stack for fund-report extraction. Bundled with deployment recipes for multi-GPU serving via Ray tensor parallelism.",
         stack: [
@@ -414,7 +414,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'Twin Python + TypeScript libraries that snapshot Langfuse prompts to disk at startup and fall back to the local cache when Langfuse is unreachable.',
         problem:
-          'Production AI services rely on Langfuse-hosted prompts fetched at runtime — a Langfuse outage immediately breaks every dependent inference pipeline.',
+          'Production AI services rely on Langfuse-hosted prompts fetched at runtime - a Langfuse outage immediately breaks every dependent inference pipeline.',
         solution:
           'A small open-source library, shipped in matching Python (PyPI) and TypeScript (npm) implementations, that wraps the official Langfuse SDK to snapshot every used prompt to disk at startup and transparently fall back to the local cache when Langfuse is unreachable. Both packages also ship a CLI suitable for Dockerfile or k8s init-container use. Adopted by other team services to harden their inference paths against Langfuse downtime.',
         stack: [
@@ -469,7 +469,7 @@ export const PROJECT_SECTIONS = freeze([
         problem:
           'LangChain shipped without a production-ready Elasticsearch-backed cache for LLM chat completions and embeddings, which meant every internal project ended up rebuilding the same caching layer against an existing Elasticsearch cluster.',
         solution:
-          'A drop-in LangChain-compatible library — ElasticsearchCache for chat models and ElasticsearchStore for embeddings — published on PyPI. Supports index aliases for ILM-based retention, customizable document building so cached LLM output is full-text searchable, and extensible subclassing for vector search over cached embeddings. The implementation was later contributed upstream and merged into LangChain itself (LangChain docs), after which the standalone package was archived.',
+          'A drop-in LangChain-compatible library - ElasticsearchCache for chat models and ElasticsearchStore for embeddings - published on PyPI. Supports index aliases for ILM-based retention, customizable document building so cached LLM output is full-text searchable, and extensible subclassing for vector search over cached embeddings. The implementation was later contributed upstream and merged into LangChain itself (LangChain docs), after which the standalone package was archived.',
         stack: ['Python', 'LangChain', 'Elasticsearch'],
         links: [
           {
@@ -494,7 +494,7 @@ export const PROJECT_SECTIONS = freeze([
         summary:
           'A self-hosted LiteLLM + Langfuse stack fronting all internal LLM traffic with per-team cost tracking, model routing, fallback rules, and Grafana dashboards.',
         problem:
-          "Once the AI team's services multiplied, each one was independently calling OpenAI/Anthropic/local-model endpoints with its own auth, retry logic, and observability — making cost attribution, model swaps, and rate-limit handling nearly impossible to manage at the company level.",
+          "Once the AI team's services multiplied, each one was independently calling OpenAI/Anthropic/local-model endpoints with its own auth, retry logic, and observability - making cost attribution, model swaps, and rate-limit handling nearly impossible to manage at the company level.",
         solution:
           'A self-hosted stack that now sits in front of all internal LLM traffic. Co-owned with SysOps (who run the underlying infra) while I own the application layer: model and provider mapping, per-team and per-project cost tracking, fallback and rate-limit rules, prompt-management policies in Langfuse, and custom Grafana dashboards for both systems. Adding a new model or routing rule is now a config change rather than per-service code.',
         stack: ['LiteLLM', 'Langfuse', 'PostgreSQL', 'Redis', 'Grafana', 'Kubernetes'],
