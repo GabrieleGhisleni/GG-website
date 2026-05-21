@@ -1,4 +1,4 @@
-# GG-website — istruzioni per Claude
+# gg-portfolio-website — istruzioni per Claude
 
 Portfolio personale in React 18 + Vite + Tailwind v4, deployato come SPA su GitHub Pages.
 
@@ -10,7 +10,7 @@ Portfolio personale in React 18 + Vite + Tailwind v4, deployato come SPA su GitH
 - Vitest + `@testing-library/react` + jsdom per smoke test.
 
 ## Comandi
-- `npm run dev` — dev server su `http://localhost:5173/GG-website/`.
+- `npm run dev` — dev server su `http://localhost:5173/gg-portfolio-website/`.
 - `npm run build` — bundle produzione in `dist/`.
 - `npm test` — esegue tutti i test Vitest.
 - `npm run deploy` — pubblica `dist/` su `gh-pages`.
@@ -43,9 +43,9 @@ Per aggiornare i progetti:
 Lo sfondo del Hero è precaricato via `<link rel="preload" as="image" fetchpriority="high">` in `index.html` + `<img loading="eager" fetchpriority="high">` underlay con classe Tailwind `bg-bg-hero-fallback`. **Non rimuovere** il fallback color né cambiare l'`<img>` in un `background-image` CSS — perderemmo l'eager-load e tornerebbe il flash bianco/nero.
 
 ## Deploy
-- `homepage` in `package.json` è `http://GabrieleGhisleni.github.io/GG-website/`.
-- Vite `base` corrispondente è `/GG-website/` in `vite.config.js`.
-- `npm run deploy` esegue `predeploy` (build) e poi `gh-pages -d dist`.
+- Vite `base` è `/gg-portfolio-website/` in `vite.config.js` — sorgente unica della verità per il path su GitHub Pages. `index.html` usa `%BASE_URL%` per favicon / og:image / preload.
+- Sito live: `https://gabrieleghisleni.github.io/gg-portfolio-website/`.
+- `npm run deploy` esegue `predeploy` (build) e poi `gh-pages -d dist`. In alternativa, ogni push su `master` triggera `.github/workflows/deploy.yml` (build + test + push su `gh-pages` via `peaceiris/actions-gh-pages`).
 
 ## Da non fare
 - Non re-introdurre Bootstrap, Reactstrap, font-awesome, react-typist o SCSS — sono stati rimossi deliberatamente (vedi `docs/superpowers/specs/2026-05-20-notion-projects-tailwind-design.md`).

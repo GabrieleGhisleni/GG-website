@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: '/GG-website/',
+  base: '/gg-portfolio-website/',
   plugins: [react(), tailwindcss()],
   test: {
     environment: 'jsdom',

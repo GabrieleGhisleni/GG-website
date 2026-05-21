@@ -4,5 +4,5 @@ export const SOCIALS = Object.freeze({
   email: 'mailto:gabriele.ghisleni01@gmail.com',
   cv: `${import.meta.env.BASE_URL}assets/GabrieleGhisleni_CV.pdf`,
   bytebrush: 'https://gabrieleghisleni.github.io/ByteBrush/',
-  source: 'https://github.com/GabrieleGhisleni/GG-website',
+  source: 'https://github.com/GabrieleGhisleni/gg-portfolio-website',
 });
