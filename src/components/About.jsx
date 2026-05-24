@@ -22,7 +22,7 @@ const About = () => (
         </p>
         <p>
           I like owning it end-to-end: the prompt, the retrieval, the GPU, the API on top, the
-          observability underneath. My fullstack background helps here — I'm comfortable from the
+          observability underneath. My fullstack background helps here, i'm comfortable from the
           database up to the app backend, not only the model in between.
         </p>
         <p>
