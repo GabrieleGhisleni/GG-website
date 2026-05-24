@@ -13,23 +13,20 @@ const About = () => (
           style={{ aspectRatio: '2/3', objectPosition: '50% 20%' }}
         />
         <p>
-          Data Science master's, with a Philosophy degree before it. The mix surprised people more
-          than it surprised me: Philosophy taught me to question how a problem is framed before
-          reaching for a tool, and Data Science gave me the tools to actually ship the answer. I've
-          always cared more about the problem than about the tech stack, which is probably why I
-          ended up at the intersection of language, data, and systems, and why most of what I find
-          interesting starts from a question rather than from a framework.
+          I'm an AI / ML Engineer at SpazioDati (ION Group), where I design and build multi-agent
+          systems and production LLM infrastructure: agentic workflows, RAG pipelines, document
+          intelligence, inference serving. Recent work spans a catalog-aware text-to-SQL agent over
+          our internal tables, the centralised multi-agent hub now deployed across our live
+          products, the company-wide LLM gateway in front of all internal AI traffic, and
+          self-hosted model serving on GPU.
         </p>
         <p>
-          I work at SpazioDati on the AI layer powering company intelligence, credit, and
-          procurement products: production LLM agents, retrieval pipelines, an agent hub, a
-          graph-based catalog-search agent, OCR/VLM benchmarks on Italian management reports. I
-          co-own the team's Langfuse + LiteLLM stack that fronts all our LLM traffic, and keep a
-          running log of what I'm learning and building on the side.
+          I like owning it end-to-end: the prompt, the retrieval, the GPU, the API on top, the
+          observability underneath. My fullstack background helps here — I'm comfortable from the
+          database up to the app backend, not only the model in between.
         </p>
         <p>
-          Outside of work I built and maintain a full booking platform for Sofia Riggi's coaching
-          practice (
+          Off-hours I solo-build and operate the platform powering{' '}
           <a
             href="https://liveyourownlife.it"
             target="_blank"
@@ -38,7 +35,15 @@ const About = () => (
           >
             LiveYourOwnLife
           </a>
-          ), handling scheduling, Stripe payments, and capacity-limited sessions end to end.
+          , a small e-commerce and coaching business: digital product sales, paid live-event
+          ticketing, Stripe webhooks for payment-to-access provisioning, an operator console.
+          Deployed on AWS Lambda.
+        </p>
+        <p>
+          M.Sc. Data Science (Trento), B.Sc. Philosophy (Pavia). The mix surprised people more than
+          it surprised me: Philosophy taught me to question how a problem is framed before reaching
+          for a tool; Data Science gave me the tools to actually ship the answer. Italian native,
+          English C1, Spanish intermediate.
         </p>
       </div>
 

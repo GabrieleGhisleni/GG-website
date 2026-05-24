@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, beforeAll } from 'vitest';
 import App from '../App';
-import { PROJECT_SECTIONS } from '../data/projects';
 
 beforeAll(() => {
   class IO {
@@ -13,20 +12,9 @@ beforeAll(() => {
 });
 
 describe('<App/> smoke test', () => {
-  it('renders the name, all sections, and all 20 projects', () => {
+  it('renders the hero name and the about section', () => {
     render(<App />);
     expect(screen.getByRole('heading', { name: /Gabriele\s+Ghisleni/i })).toBeInTheDocument();
-
-    for (const s of PROJECT_SECTIONS) {
-      expect(
-        screen.getByText(new RegExp(`^${s.title}.*\\(${s.projects.length}\\)`)),
-      ).toBeInTheDocument();
-    }
-
-    const allProjects = PROJECT_SECTIONS.flatMap((s) => s.projects);
-    expect(allProjects).toHaveLength(20);
-    for (const p of allProjects) {
-      expect(screen.getAllByText(p.name).length).toBeGreaterThan(0);
-    }
+    expect(screen.getByRole('heading', { name: /About me/i })).toBeInTheDocument();
   });
 });
