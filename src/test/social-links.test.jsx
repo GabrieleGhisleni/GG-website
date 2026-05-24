@@ -4,7 +4,7 @@ import SocialLinks from '../components/SocialLinks';
 import { SOCIALS } from '../data/socials';
 
 describe('SocialLinks', () => {
-  it('inline variant: renders github, linkedin, email and CV links', () => {
+  it('inline variant: renders github, linkedin and email links', () => {
     render(<SocialLinks />);
     expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute('href', SOCIALS.github);
     expect(screen.getByRole('link', { name: /linkedin/i })).toHaveAttribute(
@@ -12,7 +12,6 @@ describe('SocialLinks', () => {
       SOCIALS.linkedin,
     );
     expect(screen.getByRole('link', { name: /email/i })).toHaveAttribute('href', SOCIALS.email);
-    expect(screen.getByRole('link', { name: /cv|resume/i })).toHaveAttribute('href', SOCIALS.cv);
   });
 
   it('inline variant: link labels are visible text (not sr-only)', () => {

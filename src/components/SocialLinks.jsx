@@ -1,11 +1,10 @@
-import { GitFork, Link, Mail, FileDown } from 'lucide-react';
+import { GitFork, Link, Mail } from 'lucide-react';
 import { SOCIALS } from '../data/socials';
 
 const items = [
   { label: 'GitHub', href: SOCIALS.github, Icon: GitFork },
   { label: 'LinkedIn', href: SOCIALS.linkedin, Icon: Link },
   { label: 'Email', href: SOCIALS.email, Icon: Mail },
-  { label: 'CV', href: SOCIALS.cv, Icon: FileDown },
 ];
 
 const SocialLinks = ({ variant = 'inline' }) => (
